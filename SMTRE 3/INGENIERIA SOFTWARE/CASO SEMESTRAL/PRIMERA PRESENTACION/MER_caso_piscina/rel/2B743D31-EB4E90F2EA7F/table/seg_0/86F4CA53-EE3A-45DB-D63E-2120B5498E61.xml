@@ -1,0 +1,118 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="86F4CA53-EE3A-45DB-D63E-2120B5498E61" name="TURNO">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:54:47 UTC</createdTime>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="PERSONAL_ID_PERSONAL" id="4CBF8DAC-9A1E-AF8B-046C-9D60BC9C4D2B">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:54:47 UTC</createdTime>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="83CD999E-EB4B-B7CA-88F3-F97CD9374548" referredColumn="DA340C01-F9C7-3823-B363-8C27748B775F"/>
+</associations>
+</Column>
+<Column name="SECTOR_ID_SECTOR" id="321867E8-DB54-7156-BFCF-DC187E9196E9">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:54:47 UTC</createdTime>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="EFBFC5A1-286A-41B7-2377-A191130419A2" referredColumn="20135B6A-A010-04DA-C65E-29C187C4C2D7"/>
+</associations>
+</Column>
+<Column name="ID_TURNO" id="AC88333B-4567-EB87-C9F1-6B5A9080ED93">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:54:47 UTC</createdTime>
+<generatorID>0925804E-7DA7-0E35-DE10-8602F703D670</generatorID>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,5,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isRelationshipColumn>true</isRelationshipColumn>
+<isDependOnFK_AsMandatory>true</isDependOnFK_AsMandatory>
+</Column>
+<Column name="FECHA_INICIO" id="C7DAB305-56B5-9B3D-F723-D8795ECBD84D">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:54:47 UTC</createdTime>
+<generatorID>0ABF6500-A4AB-A68D-1CD9-74E4C4B5588B</generatorID>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isRelationshipColumn>true</isRelationshipColumn>
+<isDependOnFK_AsMandatory>true</isDependOnFK_AsMandatory>
+</Column>
+<Column name="FECHA_FIN" id="474B1B56-1C45-24D7-7FD8-3B71AE0F5D56">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:54:47 UTC</createdTime>
+<generatorID>E1E4CB33-A8B7-5144-110F-21BB9BBD9FA3</generatorID>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isRelationshipColumn>true</isRelationshipColumn>
+<isDependOnFK_AsMandatory>true</isDependOnFK_AsMandatory>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1536217B-D908-7A77-B5D9-2055176B3656" name="TURNO_PK">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:54:47 UTC</createdTime>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4CBF8DAC-9A1E-AF8B-046C-9D60BC9C4D2B"/>
+<colUsage columnID="321867E8-DB54-7156-BFCF-DC187E9196E9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6C8EE374-9FF1-553E-0048-D5E592480B63" name="TURNO_PERSONAL_FK">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:54:47 UTC</createdTime>
+<generatorID>8D36CC2E-06D4-1AF3-FACB-1647275A357B</generatorID>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4CBF8DAC-9A1E-AF8B-046C-9D60BC9C4D2B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B3598A5E-DFFC-1EBF-9B2D-2CCB3EA98BA3" name="TURNO_SECTOR_FK">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:54:47 UTC</createdTime>
+<generatorID>8D36CC2E-06D4-1AF3-FACB-1647275A357B</generatorID>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="321867E8-DB54-7156-BFCF-DC187E9196E9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

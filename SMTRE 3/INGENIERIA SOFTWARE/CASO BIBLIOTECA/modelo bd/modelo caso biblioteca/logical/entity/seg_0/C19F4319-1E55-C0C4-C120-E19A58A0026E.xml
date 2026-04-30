@@ -1,0 +1,59 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="C19F4319-1E55-C0C4-C120-E19A58A0026E" name="DETALLE_CATEGORIA">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-03-15 23:25:54 UTC</createdTime>
+<ownerDesignName>modelo caso biblioteca</ownerDesignName>
+<engineerTo>
+<item key="CDD0B76E-2CE5-8EF0-42AB-B9854F801A35" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_CATEGORIA" id="0794BDAE-7CA1-4F0B-5D53-7C0C8F09F23A">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-03-15 23:26:00 UTC</createdTime>
+<ownerDesignName>modelo caso biblioteca</ownerDesignName>
+<engineerTo>
+<item key="CDD0B76E-2CE5-8EF0-42AB-B9854F801A35" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="NOMBRE" id="98F30533-8D31-B70B-0ACE-D6AC23D230D6">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-03-15 23:26:11 UTC</createdTime>
+<ownerDesignName>modelo caso biblioteca</ownerDesignName>
+<engineerTo>
+<item key="CDD0B76E-2CE5-8EF0-42AB-B9854F801A35" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="958827FB-C38E-4091-038E-1D58105DCE98" name="DETALLE_CATEGORIA PK">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-03-15 23:26:10 UTC</createdTime>
+<ownerDesignName>modelo caso biblioteca</ownerDesignName>
+<engineerTo>
+<item key="CDD0B76E-2CE5-8EF0-42AB-B9854F801A35" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>0794BDAE-7CA1-4F0B-5D53-7C0C8F09F23A</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,105 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="B8BE9FCB-966A-6819-9DAA-F1DECA7A442E" name="CONFIGURACION_ACUERDO">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:17:11 UTC</createdTime>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<engineerTo>
+<item key="2B743D31-43EA-687E-15D4-EB4E90F2EA7F" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_CONFIG" id="E465264A-11FB-A2BF-6276-F9EA08B1E294">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:17:24 UTC</createdTime>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<engineerTo>
+<item key="2B743D31-43EA-687E-15D4-EB4E90F2EA7F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="VALOR_VISITA" id="B8A258E3-DCB7-F4A3-EB04-C7797CB9F02D">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:18:01 UTC</createdTime>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<engineerTo>
+<item key="2B743D31-43EA-687E-15D4-EB4E90F2EA7F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_ACUERDO" id="8E96B423-BCFA-806A-BCF0-5DBF47EFA8C9">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:45:59 UTC</createdTime>
+<generatorID>5AAD8BD7-D75E-522C-758D-55B01E1832D5</generatorID>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<engineerTo>
+<item key="2B743D31-43EA-687E-15D4-EB4E90F2EA7F" value="true"/>
+</engineerTo>
+<referedAttribute>8BC49535-7DA5-2B74-4FD4-96B3539EABFB</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_ESTACION" id="D6831A57-1EDA-E6AA-EEE2-BCE6BE50219B">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:46:31 UTC</createdTime>
+<generatorID>1B58C107-A34E-DE9E-3C8B-86EF08F49E8D</generatorID>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<engineerTo>
+<item key="2B743D31-43EA-687E-15D4-EB4E90F2EA7F" value="true"/>
+</engineerTo>
+<referedAttribute>E7815A54-E620-39D6-9E72-ED7FE687622F</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_FRECUENCIA" id="77636A22-086F-B4BE-2300-149400A4F193">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:47:16 UTC</createdTime>
+<generatorID>EDB6AE77-5D57-ABE9-E142-EDDD6F9D1D1A</generatorID>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<engineerTo>
+<item key="2B743D31-43EA-687E-15D4-EB4E90F2EA7F" value="true"/>
+</engineerTo>
+<referedAttribute>88E645E5-DF6E-CCD1-5360-A98AC11658DB</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="CF4ED53B-D204-C545-9C3A-4A0301EC6949" name="CONFIGURACION_ACUERDO PK">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:18:00 UTC</createdTime>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<engineerTo>
+<item key="2B743D31-43EA-687E-15D4-EB4E90F2EA7F" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>E465264A-11FB-A2BF-6276-F9EA08B1E294</attributeRef>
+<attributeRef>8E96B423-BCFA-806A-BCF0-5DBF47EFA8C9</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

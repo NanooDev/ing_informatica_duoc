@@ -1,0 +1,170 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="AFA6D871-92E0-AD52-5116-2A118BC02D03" name="Detalles_Documento">
+<createdBy>PC</createdBy>
+<createdTime>2025-10-27 01:11:28 UTC</createdTime>
+<ownerDesignName>Venta_Simplificada</ownerDesignName>
+<ordsAlias>detalle_documento</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Nro_Documento" id="4FB5E7C7-BD08-3A8A-DC90-048670FC6D58">
+<createdBy>PC</createdBy>
+<createdTime>2025-10-27 01:11:28 UTC</createdTime>
+<ownerDesignName>Venta_Simplificada</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="48F47603-05A7-0398-B474-C74C5356E30F" referredColumn="44AAC315-00E9-DD2D-F83F-4E97F213298F"/>
+</associations>
+</Column>
+<Column name="Id_Tipo" id="26FC81A8-AE86-004A-23C7-A7438358200E">
+<createdBy>PC</createdBy>
+<createdTime>2025-10-27 01:11:28 UTC</createdTime>
+<ownerDesignName>Venta_Simplificada</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>3</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="48F47603-05A7-0398-B474-C74C5356E30F" referredColumn="4C83464F-7C4F-AF6F-688D-4BFA2BE2D74A"/>
+</associations>
+</Column>
+<Column name="Id_Producto" id="06C22E35-69FE-22E3-6EB3-356B0B4629F7">
+<createdBy>PC</createdBy>
+<createdTime>2025-10-27 01:11:28 UTC</createdTime>
+<ownerDesignName>Venta_Simplificada</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B1B10E5C-8D93-04B2-E5FF-DB67E56A1AAB" referredColumn="2C3CE2EF-B563-EF72-084C-BD85B0810DD9"/>
+</associations>
+</Column>
+<Column name="Cantidad" id="5285C1CF-420E-F171-D833-A8A85B560FC1">
+<createdBy>PC</createdBy>
+<createdTime>2025-10-27 01:11:28 UTC</createdTime>
+<generatorID>33D7E057-3477-5D51-C86C-63BFC74E0759</generatorID>
+<ownerDesignName>Venta_Simplificada</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,3,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isRelationshipColumn>true</isRelationshipColumn>
+<isDependOnFK_AsMandatory>true</isDependOnFK_AsMandatory>
+</Column>
+<Column name="Precio" id="ECA90681-FD62-32C0-D799-4BC1FAC8B9E6">
+<createdBy>PC</createdBy>
+<createdTime>2025-10-27 01:11:28 UTC</createdTime>
+<generatorID>7B7CCEDA-4CFA-D869-F483-501DBD98A0D4</generatorID>
+<ownerDesignName>Venta_Simplificada</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,6,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isRelationshipColumn>true</isRelationshipColumn>
+<isDependOnFK_AsMandatory>true</isDependOnFK_AsMandatory>
+</Column>
+<Column name="Valor_Bruto" id="DEF3A0CB-19FD-8593-231C-C12774DC6981">
+<createdBy>PC</createdBy>
+<createdTime>2025-10-27 01:11:28 UTC</createdTime>
+<generatorID>081B1B73-AA87-A68E-2263-A18B72AC17ED</generatorID>
+<ownerDesignName>Venta_Simplificada</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,6,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isRelationshipColumn>true</isRelationshipColumn>
+<isDependOnFK_AsMandatory>true</isDependOnFK_AsMandatory>
+</Column>
+<Column name="Valor_Iva" id="ED7F52A4-BB2B-15D2-968A-BC36BE41BC5A">
+<createdBy>PC</createdBy>
+<createdTime>2025-10-27 01:11:28 UTC</createdTime>
+<generatorID>1092D47A-3CBE-DBC6-5597-C62FC0F5D5AD</generatorID>
+<ownerDesignName>Venta_Simplificada</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,6,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isRelationshipColumn>true</isRelationshipColumn>
+<isDependOnFK_AsMandatory>true</isDependOnFK_AsMandatory>
+</Column>
+<Column name="Valor_Neto" id="2F7536A3-0342-B22D-BB61-5EE105975E54">
+<createdBy>PC</createdBy>
+<createdTime>2025-10-27 01:11:28 UTC</createdTime>
+<generatorID>09597FEC-8CCA-148A-B5C7-D5D989A2B966</generatorID>
+<ownerDesignName>Venta_Simplificada</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,6,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isRelationshipColumn>true</isRelationshipColumn>
+<isDependOnFK_AsMandatory>true</isDependOnFK_AsMandatory>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7A2EC862-B481-1B13-89CE-A0EB28FA1387" name="Detalle_Documento_PK">
+<createdBy>PC</createdBy>
+<createdTime>2025-10-27 01:11:28 UTC</createdTime>
+<ownerDesignName>Venta_Simplificada</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4FB5E7C7-BD08-3A8A-DC90-048670FC6D58"/>
+<colUsage columnID="26FC81A8-AE86-004A-23C7-A7438358200E"/>
+<colUsage columnID="06C22E35-69FE-22E3-6EB3-356B0B4629F7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="082892C6-6271-89CB-9408-2CBB0D508506" name="Documento_FK_Detalle_Documento">
+<createdBy>PC</createdBy>
+<createdTime>2025-10-27 01:11:28 UTC</createdTime>
+<generatorID>94ACC062-B82E-CC5B-8768-FBA6E92071D2</generatorID>
+<ownerDesignName>Venta_Simplificada</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4FB5E7C7-BD08-3A8A-DC90-048670FC6D58"/>
+<colUsage columnID="26FC81A8-AE86-004A-23C7-A7438358200E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D3DC30EE-B4C4-1FEE-904C-372BDCA14930" name="Producto_FK_Detalle_Documento">
+<createdBy>PC</createdBy>
+<createdTime>2025-10-27 01:11:28 UTC</createdTime>
+<generatorID>94ACC062-B82E-CC5B-8768-FBA6E92071D2</generatorID>
+<ownerDesignName>Venta_Simplificada</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="06C22E35-69FE-22E3-6EB3-356B0B4629F7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

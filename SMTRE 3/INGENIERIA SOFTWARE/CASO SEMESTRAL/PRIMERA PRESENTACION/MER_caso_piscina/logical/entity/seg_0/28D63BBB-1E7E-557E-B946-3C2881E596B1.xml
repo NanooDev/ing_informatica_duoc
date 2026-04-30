@@ -1,0 +1,59 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="28D63BBB-1E7E-557E-B946-3C2881E596B1" name="FRECUENCIA_MANTENCION">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:06:37 UTC</createdTime>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<engineerTo>
+<item key="2B743D31-43EA-687E-15D4-EB4E90F2EA7F" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_FRECUENCIA" id="88E645E5-DF6E-CCD1-5360-A98AC11658DB">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:14:57 UTC</createdTime>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<engineerTo>
+<item key="2B743D31-43EA-687E-15D4-EB4E90F2EA7F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="DESCRIPCION" id="C436CAC4-E731-A89C-663D-426D3E459EEB">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:15:08 UTC</createdTime>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<engineerTo>
+<item key="2B743D31-43EA-687E-15D4-EB4E90F2EA7F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="B1788C63-4DF1-4D03-EA7E-31BFCD1F4931" name="FRECUENCIA_MANTENCION PK">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:15:07 UTC</createdTime>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<engineerTo>
+<item key="2B743D31-43EA-687E-15D4-EB4E90F2EA7F" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>88E645E5-DF6E-CCD1-5360-A98AC11658DB</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

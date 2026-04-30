@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Region_FK_Comuna" directorySegmentName="seg_0" id="8B1CD364-6DCA-7A87-DF56-FF4A5FAB86A6">
+<createdBy>PC</createdBy>
+<createdTime>2025-10-27 00:49:26 UTC</createdTime>
+<ownerDesignName>Venta_Simplificada</ownerDesignName>
+<engineerTo>
+<item key="69EDA0DB-A850-88DB-5798-6A17C448B8C1" value="true"/>
+</engineerTo>
+<sourcePk>74B81B9B-E15F-363A-B8D1-65CCD1D5CB27</sourcePk>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>86CF428F-1B6A-C291-AA9D-2F4026414A45</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>21B31803-A707-05F5-51AF-442309B46773</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

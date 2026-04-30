@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="modelo caso biblioteca" id="C4E91EA9-F334-FDC8-D9AA-EAFBD26037B7" version="3.5">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-03-15 23:16:36 UTC</createdTime>
+<ownerDesignName>modelo caso biblioteca</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>C4E91EA9-F334-FDC8-D9AA-EAFBD26037B7</designId>
+</OSDM_Design>

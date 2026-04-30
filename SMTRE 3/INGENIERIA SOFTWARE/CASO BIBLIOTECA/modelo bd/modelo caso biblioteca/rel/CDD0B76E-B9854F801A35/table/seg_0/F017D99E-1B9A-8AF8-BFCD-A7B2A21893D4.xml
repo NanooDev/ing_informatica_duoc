@@ -1,0 +1,77 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F017D99E-1B9A-8AF8-BFCD-A7B2A21893D4" name="RESERVAS">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-03-16 01:19:25 UTC</createdTime>
+<generatorID>19E91330-3C78-1693-7C3B-195C15EB4ACC</generatorID>
+<ownerDesignName>modelo caso biblioteca</ownerDesignName>
+<ordsAlias>reserva</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_RESERVA" id="6A5BCDE9-0856-0DB6-1F82-D1F40312E9D4">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-03-16 01:19:25 UTC</createdTime>
+<generatorID>324DDD1B-9CD5-7C74-2B4D-FCCF44A992D6</generatorID>
+<ownerDesignName>modelo caso biblioteca</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_RESERVA" id="EA51497E-4580-75D5-6684-100FFC7D3BC2">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-03-16 01:19:25 UTC</createdTime>
+<generatorID>6E778D9C-C42F-F5AD-CD20-353723775452</generatorID>
+<ownerDesignName>modelo caso biblioteca</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RUT" id="E0F37543-A776-D4FB-357C-EEAD9F845818">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-03-16 01:19:25 UTC</createdTime>
+<generatorID>62598D4F-1126-C23A-736A-594B7CE03A21</generatorID>
+<ownerDesignName>modelo caso biblioteca</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="286DAD77-7E12-83EB-BD1A-ACC837CEEA1D" referredColumn="5E2364E3-D759-B386-19BC-437DA9E349F4"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="092EB956-67CF-72CC-33A0-7AA1C2836E29" name="RESERVA_PK">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-03-16 01:19:25 UTC</createdTime>
+<generatorID>53C2CE09-0988-034A-3A77-48457C59CADA</generatorID>
+<ownerDesignName>modelo caso biblioteca</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6A5BCDE9-0856-0DB6-1F82-D1F40312E9D4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6F344932-41AE-645B-DFFF-FFFD530101AA" name="RESERVA_USUARIO_FK">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-03-16 01:19:25 UTC</createdTime>
+<generatorID>E3E2C9BC-8243-A97E-21CD-0D95E09E3F02</generatorID>
+<ownerDesignName>modelo caso biblioteca</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E0F37543-A776-D4FB-357C-EEAD9F845818"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

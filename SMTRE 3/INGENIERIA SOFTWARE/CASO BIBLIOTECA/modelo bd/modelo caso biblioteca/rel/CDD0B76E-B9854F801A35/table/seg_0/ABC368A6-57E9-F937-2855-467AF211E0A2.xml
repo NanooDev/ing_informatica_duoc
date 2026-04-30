@@ -1,0 +1,51 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="ABC368A6-57E9-F937-2855-467AF211E0A2" name="DETALLE_CATEGORIAS">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-03-16 01:19:24 UTC</createdTime>
+<generatorID>C19F4319-1E55-C0C4-C120-E19A58A0026E</generatorID>
+<ownerDesignName>modelo caso biblioteca</ownerDesignName>
+<ordsAlias>detalle_categoria</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_CATEGORIA" id="147E0899-6430-2E05-56D9-4E1798457088">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-03-16 01:19:25 UTC</createdTime>
+<generatorID>0794BDAE-7CA1-4F0B-5D53-7C0C8F09F23A</generatorID>
+<ownerDesignName>modelo caso biblioteca</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOMBRE" id="FDAD79F8-63BC-3255-D01F-D8CF996E66CA">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-03-16 01:19:25 UTC</createdTime>
+<generatorID>98F30533-8D31-B70B-0ACE-D6AC23D230D6</generatorID>
+<ownerDesignName>modelo caso biblioteca</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6F4C1B2F-73F9-87DE-3944-EC78A4CBB0DE" name="DETALLE_CATEGORIA_PK">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-03-16 01:19:25 UTC</createdTime>
+<generatorID>958827FB-C38E-4091-038E-1D58105DCE98</generatorID>
+<ownerDesignName>modelo caso biblioteca</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="147E0899-6430-2E05-56D9-4E1798457088"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

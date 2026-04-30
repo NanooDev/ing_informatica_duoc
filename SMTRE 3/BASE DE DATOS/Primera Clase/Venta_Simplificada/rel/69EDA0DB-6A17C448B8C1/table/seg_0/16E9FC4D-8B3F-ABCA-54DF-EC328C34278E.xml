@@ -1,0 +1,51 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="16E9FC4D-8B3F-ABCA-54DF-EC328C34278E" name="Productos">
+<createdBy>PC</createdBy>
+<createdTime>2025-10-27 01:11:28 UTC</createdTime>
+<generatorID>A77B65A5-CE54-04DF-39EF-F2A520258E91</generatorID>
+<ownerDesignName>Venta_Simplificada</ownerDesignName>
+<ordsAlias>producto</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id_Producto" id="2C3CE2EF-B563-EF72-084C-BD85B0810DD9">
+<createdBy>PC</createdBy>
+<createdTime>2025-10-27 01:11:28 UTC</createdTime>
+<generatorID>071E00E9-5B83-F661-0281-A9910B68E0B8</generatorID>
+<ownerDesignName>Venta_Simplificada</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nombre" id="9517E360-BE4B-A799-D06C-B02676D162E3">
+<createdBy>PC</createdBy>
+<createdTime>2025-10-27 01:11:28 UTC</createdTime>
+<generatorID>4572AD89-001A-375A-8819-86FBFCC4C76C</generatorID>
+<ownerDesignName>Venta_Simplificada</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60</dataTypeSize>
+<ownDataTypeParameters>60,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="742AEE0A-29F5-C21F-6C92-15C052449007" name="Producto_PK">
+<createdBy>PC</createdBy>
+<createdTime>2025-10-27 01:11:28 UTC</createdTime>
+<generatorID>F9714FB7-07E0-4FA3-E0A8-0CC21C0010CC</generatorID>
+<ownerDesignName>Venta_Simplificada</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2C3CE2EF-B563-EF72-084C-BD85B0810DD9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

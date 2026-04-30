@@ -1,0 +1,20 @@
+-- REQUERIMIENTO 1
+SELECT
+    INITCAP(e.PNOMBRE_EMP || ' ' ||
+            e.APPATERNO_EMP) NOMBRE_EMPLEADO,
+    SUBSTR(e.PNOMBRE_EMP, 1, 2)                    ||
+    UPPER(SUBSTR(e.APMATERNO_EMP, -1, 1))          ||
+    TRUNC(MONTHS_BETWEEN(SYSDATE, e.FECHA_NAC)/12) ||
+    LOWER(SUBSTR(c.NOMBRE_COMUNA, 1, 3))           ||
+    UPPER(SUBSTR(ts.DESCRIPCION, 1, 3))            ||
+    TO_CHAR(e.FECHA_NAC, 'MM')                     ||
+    CASE ec.NOMBRE_ESTADO_CIVIL
+        WHEN 'CASADO' THEN '*'
+        WHEN 'SOLTERO' THEN '?'
+        WHEN 'SEPARADO' THEN '+'
+        ELSE '='
+    END CLAVE_EMPLEADO
+FROM EMPLEADO e
+    JOIN COMUNA c ON (e.ID_COMUNA = c.ID_COMUNA)
+    JOIN TIPO_SALUD ts ON (e.ID_TIPO_SAL = ts.ID_TIPO_SAL)
+    JOIN ESTADO_CIVIL ec ON (e.ID_ESTADO_CIVIL = ec.ID_ESTADO_CIVIL);

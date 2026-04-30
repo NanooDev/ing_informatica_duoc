@@ -1,0 +1,140 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="48FEB268-3A1C-C202-13EC-894460BADD29" name="CLIENTE">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:54:47 UTC</createdTime>
+<generatorID>F81FE5DF-A012-7F1D-A358-60D5E00FC320</generatorID>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_CLIENTE" id="600FA77D-F188-D3FB-2922-AE03360BE8AF">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:54:47 UTC</createdTime>
+<generatorID>CBD6E2FA-E8EB-B1F4-2715-B7DBBCCDD5B8</generatorID>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RAZON_SOCIAL" id="63AB1D25-FE2D-6EF9-1FD3-F0F7CEA2AA10">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:54:47 UTC</createdTime>
+<generatorID>FDA8E5A3-40B1-8BDA-8DD1-C7D8D66F4683</generatorID>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RUT" id="BD705936-8D89-9F30-AC55-8201CDC48321">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:54:47 UTC</createdTime>
+<generatorID>47161D7D-5010-8973-4DFD-288C4C602516</generatorID>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,8,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DVRUT" id="6DACAB83-5AC4-4B78-F746-CECA1223674F">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:54:47 UTC</createdTime>
+<generatorID>724B4D61-B77A-0B44-C691-6DE28A307A08</generatorID>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CORREO" id="F5D5ECC7-5E41-43D3-07C0-4068AF638E25">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:54:47 UTC</createdTime>
+<generatorID>E4C1221E-CCC0-0323-AE31-F76B65EBEC4E</generatorID>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_TIPO" id="03560B22-2A8A-D19D-CB73-BC61DC0DDF81">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:54:47 UTC</createdTime>
+<generatorID>BC3E12B7-273E-48D4-8335-4D6F269F8D71</generatorID>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DF349B7F-529B-2441-1E54-A21CB739C991" referredColumn="7C32BEDA-F6E9-5FAA-FEAD-04F8EBCE5355"/>
+</associations>
+</Column>
+<Column name="ID_CATEGORIA" id="73329C9D-D17B-C76D-7AB2-12EE4F33E406">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:54:47 UTC</createdTime>
+<generatorID>75EB1D6E-A36B-45BF-4770-3FFC67A0BAA4</generatorID>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9C9FA8EE-832B-000B-7D2F-42E4B08CDA6D" referredColumn="AD8003AA-BC26-2831-110F-275884E7D4F6"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F42B8DBE-E163-9AFF-BEE7-4AF87871E19E" name="CLIENTE_PK">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:54:47 UTC</createdTime>
+<generatorID>2BE762C7-31C6-8DB9-1F01-57D81B18255D</generatorID>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="600FA77D-F188-D3FB-2922-AE03360BE8AF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B1C835E9-6D04-02F3-B728-6820CBE5EAE0" name="CLIENTE_TIPO_CLIENTE_FK">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:54:47 UTC</createdTime>
+<generatorID>76B30A1C-2AE4-0BE7-6160-C9C3747ABD7F</generatorID>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="03560B22-2A8A-D19D-CB73-BC61DC0DDF81"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="73E376E4-515A-8139-C1D8-DD346AD44946" name="CLIENTE_CATEGORIA_CLIENTE_FK">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:54:47 UTC</createdTime>
+<generatorID>9DA24C9B-6688-14BD-E068-79D3E8681F07</generatorID>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="73329C9D-D17B-C76D-7AB2-12EE4F33E406"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,77 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="AF3727E0-345B-B28E-2EEE-19FD859024BE" name="SECTOR">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:54:47 UTC</createdTime>
+<generatorID>DD61F674-2A52-AFC5-4FF0-12D84C315A2D</generatorID>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_SECTOR" id="20135B6A-A010-04DA-C65E-29C187C4C2D7">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:54:47 UTC</createdTime>
+<generatorID>572BBF64-A774-CEA2-EA99-2045738F4ADB</generatorID>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOMBRE" id="DA0D0993-1A06-6557-74D4-C7B10FBD114C">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:54:47 UTC</createdTime>
+<generatorID>7E827C1A-033B-ABCF-3EAD-B8FB369B450D</generatorID>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_COMUNA" id="52BA20D9-B365-6181-9889-D00B34F5888E">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:54:47 UTC</createdTime>
+<generatorID>1F76401A-A869-9378-FB37-115E3EBC2045</generatorID>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1F202349-D935-4E4C-8949-2A9F77E6400D" referredColumn="2DDFE710-8750-275A-3A76-83A74211F755"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4E41EF7E-EA3B-57FC-C005-14BFAD991B20" name="SECTOR_PK">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:54:47 UTC</createdTime>
+<generatorID>ADC35945-57F9-A6C1-CE83-2173541DCC7C</generatorID>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="20135B6A-A010-04DA-C65E-29C187C4C2D7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="75FC5423-0E66-B98E-4DC9-2D39BD7E4E11" name="SECTOR_COMUNA_FK">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:54:47 UTC</createdTime>
+<generatorID>06574490-9F1E-BE52-73D0-29BF46D023DA</generatorID>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="52BA20D9-B365-6181-9889-D00B34F5888E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

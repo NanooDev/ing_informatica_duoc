@@ -1,0 +1,92 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D8E22F7F-08A7-8816-4883-954B054CA356" name="CLIENTE_EMPRESA">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:54:47 UTC</createdTime>
+<generatorID>EBA33701-18FA-7CD1-EE32-E79FA6D831A8</generatorID>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="DIRECCION_FACTURACION" id="0B15D694-96EE-280D-3E11-481885C60E33">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:54:47 UTC</createdTime>
+<generatorID>DA171D1F-B400-05B2-3B14-B9A42852A602</generatorID>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_CLIENTE" id="55A714E8-E80F-E319-68CF-B597A7EA0FCE">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:54:47 UTC</createdTime>
+<generatorID>893B06DF-94F7-8CD8-E47D-1ED3B7FF2367</generatorID>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0A6EFA59-E757-0314-CACA-B477E5FC98B3" referredColumn="600FA77D-F188-D3FB-2922-AE03360BE8AF"/>
+</associations>
+</Column>
+<Column name="ID_GIRO" id="A7D8E172-648A-7EC9-434D-256D8654BDED">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:54:47 UTC</createdTime>
+<generatorID>352A5B53-1EE8-DF52-0E49-0EE7DE18A881</generatorID>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="396A488B-F44B-7A4E-FC08-C3002E47AF76" referredColumn="8BBEE52B-D53B-4AA7-48CA-F5935FA73D8A"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="BB08C331-0F7A-C810-BF6A-4E01D587900F" name="CLIENTE_EMPRESA_PK">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:54:47 UTC</createdTime>
+<generatorID>D5835688-818A-7718-FA77-7F274D995120</generatorID>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="55A714E8-E80F-E319-68CF-B597A7EA0FCE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="444896BC-4B5A-4FD1-D01E-39DE64FFF1A9" name="CLIENTE_EMPRESA_CLIENTE_FK">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:54:47 UTC</createdTime>
+<generatorID>BF32808F-9101-BBBF-E7C4-F51767DFA1FA</generatorID>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="55A714E8-E80F-E319-68CF-B597A7EA0FCE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4F08D4F2-B108-FEA9-DA62-D976C7E3339D" name="CLIENTE_EMPRESA_GIRO_FK">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:54:47 UTC</createdTime>
+<generatorID>BD571157-DCA9-A985-CE47-E47C807B6429</generatorID>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A7D8E172-648A-7EC9-434D-256D8654BDED"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

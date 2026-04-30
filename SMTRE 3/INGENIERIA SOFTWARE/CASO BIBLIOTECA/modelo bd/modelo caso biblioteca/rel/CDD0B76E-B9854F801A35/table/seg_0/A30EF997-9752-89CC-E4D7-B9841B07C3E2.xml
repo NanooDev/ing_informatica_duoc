@@ -1,0 +1,78 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A30EF997-9752-89CC-E4D7-B9841B07C3E2" name="ROLES">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-03-16 01:19:25 UTC</createdTime>
+<generatorID>09538CC4-7BA8-FBA5-E692-6BB40F30F8FC</generatorID>
+<ownerDesignName>modelo caso biblioteca</ownerDesignName>
+<ordsAlias>rol</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_ROL" id="390C50B4-9980-5529-7663-3ADBDABEB5A2">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-03-16 01:19:25 UTC</createdTime>
+<generatorID>FE80DBC0-DDB4-48BC-CCD0-8D459D2B1DCB</generatorID>
+<ownerDesignName>modelo caso biblioteca</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOMBRE" id="C5E520E3-CD85-AE28-54FD-F575D72DB9D2">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-03-16 01:19:25 UTC</createdTime>
+<generatorID>07B2DE12-C6FB-36D0-1065-8483698062EB</generatorID>
+<ownerDesignName>modelo caso biblioteca</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RUT" id="3005399B-6ECE-3A8E-222D-18FFC2B0A4B0">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-03-16 01:19:25 UTC</createdTime>
+<generatorID>A8FBDF5D-9AAB-B8DD-391F-B6B3F7399BBB</generatorID>
+<ownerDesignName>modelo caso biblioteca</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F8CD9B86-7B11-29B3-5FD4-90A32BE5EB1F" referredColumn="5E2364E3-D759-B386-19BC-437DA9E349F4"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7F00B29D-0FBF-1B77-3360-2616CBD3FE61" name="ROL_PK">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-03-16 01:19:25 UTC</createdTime>
+<generatorID>2A9E800E-3F9D-860E-AE88-D4422F21098D</generatorID>
+<ownerDesignName>modelo caso biblioteca</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="390C50B4-9980-5529-7663-3ADBDABEB5A2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="595EF379-B987-6CE5-6917-5642A615EB8C" name="ROL_USUARIO_FK">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-03-16 01:19:25 UTC</createdTime>
+<generatorID>1D06A068-55E6-87D2-D0B1-6FC39C41CE0A</generatorID>
+<ownerDesignName>modelo caso biblioteca</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3005399B-6ECE-3A8E-222D-18FFC2B0A4B0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

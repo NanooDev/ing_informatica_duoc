@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mockup - Verano Perfecto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Verano Perfecto</h2>
+        <nav>
+            <a href="#" class="active">Panel de Control</a>
+            <a href="#">Rutas de Hoy</a>
+            <a href="#">Inventario</a>
+            <a href="#">Clientes</a>
+        </nav>
+    </div>
+
+    <main class="content">
+        <header>
+            <h1>Gestión de Mantenciones en Tiempo Real</h1>
+            <div class="user-info">Rol: Supervisor (Mariano)</div>
+        </header>
+
+        <div class="alert warning">
+            <strong>⚠️ ALERTA DE STOCK:</strong> Quedan 480 pastillas de cloro. <button>Generar Orden de Compra</button>
+        </div>
+
+        <section class="status-cards">
+            <div class="card">
+                <h3>Mantenciones Hoy</h3>
+                <p class="number">12</p>
+            </div>
+            <div class="card">
+                <h3>En Proceso</h3>
+                <p class="number blue">4</p>
+            </div>
+            <div class="card">
+                <h3>Finalizadas</h3>
+                <p class="number green">8</p>
+            </div>
+        </section>
+
+        <section class="main-table">
+            <h3>Estatus de Mantenciones (Ruta Optimizada)</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Cliente / Dirección</th>
+                        <th>Tipo Piscina</th>
+                        <th>Estado</th>
+                        <th>Insumos Usados</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Condominio Central</strong><br>Av. Las Torres 123</td>
+                        <td>Grande (25 min)</td>
+                        <td><span class="tag in-progress">En Proceso</span></td>
+                        <td>2 Pastillas Cloro</td>
+                        <td><button class="btn-view">Ver Detalles</button></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Familia Gómez</strong><br>Calle El Sol 45</td>
+                        <td>Familiar (15 min)</td>
+                        <td><span class="tag completed">Efectuado</span></td>
+                        <td>1 Pastilla Cloro</td>
+                        <td><button class="btn-view">Ver Reporte</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+</html>

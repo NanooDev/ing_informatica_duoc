@@ -1,0 +1,118 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8781163F-7E4F-D81A-B6FD-126FB593C9DF" name="Clientes">
+<createdBy>PC</createdBy>
+<createdTime>2025-10-27 01:11:28 UTC</createdTime>
+<generatorID>3AC04233-4AE7-7518-D775-5575968CA9F1</generatorID>
+<ownerDesignName>Venta_Simplificada</ownerDesignName>
+<ordsAlias>cliente</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Rut_Cliente" id="91060D52-B5FC-FB50-293B-9801066D94F0">
+<createdBy>PC</createdBy>
+<createdTime>2025-10-27 01:11:28 UTC</createdTime>
+<generatorID>8807548E-CC2A-3BC4-6B6C-A69DD7189375</generatorID>
+<ownerDesignName>Venta_Simplificada</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Razon_Social" id="F70D4150-EE4B-FD68-26DA-546FB8A300E7">
+<createdBy>PC</createdBy>
+<createdTime>2025-10-27 01:11:28 UTC</createdTime>
+<generatorID>3E2413B7-1194-E5C6-327F-C67E0CF1922D</generatorID>
+<ownerDesignName>Venta_Simplificada</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Direccion" id="C10B7B03-5C78-CEAC-341A-E916B0682A5E">
+<createdBy>PC</createdBy>
+<createdTime>2025-10-27 01:11:28 UTC</createdTime>
+<generatorID>81289552-C103-C92E-09F1-F18AA9E575E7</generatorID>
+<ownerDesignName>Venta_Simplificada</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Id_Comuna" id="B4410C05-2134-44A6-24AD-6827C25D9864">
+<createdBy>PC</createdBy>
+<createdTime>2025-10-27 01:11:28 UTC</createdTime>
+<generatorID>A7F6DE66-CB2E-FCC3-41F7-3A12C3A5AE23</generatorID>
+<ownerDesignName>Venta_Simplificada</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FB8896D1-5FE4-91AA-8298-99A177A984C4" referredColumn="644DC5BD-BD29-9855-7786-DD2DEFB2AB87"/>
+</associations>
+</Column>
+<Column name="Id_Region" id="060010F3-E9BB-22BD-BEED-6C3022C008DF">
+<createdBy>PC</createdBy>
+<createdTime>2025-10-27 01:11:28 UTC</createdTime>
+<generatorID>7021A45A-BCD1-5D72-D0AA-E7D771ED097D</generatorID>
+<ownerDesignName>Venta_Simplificada</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FB8896D1-5FE4-91AA-8298-99A177A984C4" referredColumn="F376C190-01F5-445D-A6BF-3E87CE13D193"/>
+</associations>
+</Column>
+<Column name="Fecha_Nacimiento" id="3697A0A7-CAF8-3FF9-953A-8C8A6CE2691E">
+<createdBy>PC</createdBy>
+<createdTime>2025-10-27 01:11:28 UTC</createdTime>
+<generatorID>4AA6D8A6-8F1C-5D69-63D9-8BB55F63A131</generatorID>
+<ownerDesignName>Venta_Simplificada</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="100E89D6-5CF3-9F2F-8865-5E053B418AA6" name="Cliente_PK">
+<createdBy>PC</createdBy>
+<createdTime>2025-10-27 01:11:28 UTC</createdTime>
+<generatorID>B0B5BA17-1A54-BD43-177B-E7C946E11A5D</generatorID>
+<ownerDesignName>Venta_Simplificada</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="91060D52-B5FC-FB50-293B-9801066D94F0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C284AEDB-2F60-3E92-F52E-5F14857130F8" name="Comuna_FK_Cliente">
+<createdBy>PC</createdBy>
+<createdTime>2025-10-27 01:11:28 UTC</createdTime>
+<generatorID>5907147E-B481-BC9C-7A9D-DE9AB437B7A0</generatorID>
+<ownerDesignName>Venta_Simplificada</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B4410C05-2134-44A6-24AD-6827C25D9864"/>
+<colUsage columnID="060010F3-E9BB-22BD-BEED-6C3022C008DF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

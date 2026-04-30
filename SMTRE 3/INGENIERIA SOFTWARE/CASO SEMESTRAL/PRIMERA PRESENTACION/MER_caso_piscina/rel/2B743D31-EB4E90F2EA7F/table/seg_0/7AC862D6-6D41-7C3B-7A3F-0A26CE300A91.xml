@@ -1,0 +1,131 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7AC862D6-6D41-7C3B-7A3F-0A26CE300A91" name="PISCINA">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:54:47 UTC</createdTime>
+<generatorID>99D65251-593E-690E-8BD8-6E8F369A42F3</generatorID>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_PISCINA" id="A6739D66-D40A-A53A-7D72-A7DC406CA1B6">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:54:47 UTC</createdTime>
+<generatorID>81DBD1E4-A096-1298-4049-1802B405848B</generatorID>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DIRECCION_EXACTA" id="BA2A5753-F905-132E-CEA0-FE18FC4ED2EE">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:54:47 UTC</createdTime>
+<generatorID>A832C650-FB88-D6FC-CCAD-D70E0D6E97CF</generatorID>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_SECTOR" id="D104848C-8B87-3C7A-5A7E-54EC4587DA07">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:54:47 UTC</createdTime>
+<generatorID>ABD8A082-45CA-EAAE-2CFC-6253780783B1</generatorID>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4DC29E5D-29B8-8DFB-C9E0-F336C8ADD64D" referredColumn="20135B6A-A010-04DA-C65E-29C187C4C2D7"/>
+</associations>
+</Column>
+<Column name="ID_CLIENTE" id="8E075772-F428-B444-7A78-14D304EAB98F">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:54:47 UTC</createdTime>
+<generatorID>66FAE157-3A92-28BC-D279-413AB3D2CC3C</generatorID>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="63BA75EF-516E-1D10-9D7F-445E93A35007" referredColumn="600FA77D-F188-D3FB-2922-AE03360BE8AF"/>
+</associations>
+</Column>
+<Column name="ID_TAMANNO" id="57927ECD-8135-B228-9DC0-B6029E9A4FD4">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:54:47 UTC</createdTime>
+<generatorID>20C9F36D-01A2-F1F2-A89B-0312D9B58B2C</generatorID>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A96FFBCC-F57E-E114-1776-D1D9110642AE" referredColumn="6A3084CB-0199-B45A-9F20-2C68DDC66298"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="24F83900-E2C5-438C-3C6A-7A123F0F089D" name="PISCINA_PK">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:54:47 UTC</createdTime>
+<generatorID>1F438506-E8ED-93C2-062E-FBDC0D80B62B</generatorID>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A6739D66-D40A-A53A-7D72-A7DC406CA1B6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3690E8BD-8E4D-722E-9C4D-C8A6EEBF286E" name="PISCINA_SECTOR_FK">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:54:47 UTC</createdTime>
+<generatorID>3EAAF890-DE51-5E87-83B9-F2B70F181535</generatorID>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D104848C-8B87-3C7A-5A7E-54EC4587DA07"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C39F7EB9-FF69-6B4A-D3D7-EAD161D71498" name="PISCINA_CLIENTE_FK">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:54:47 UTC</createdTime>
+<generatorID>CD4DA640-4475-8652-5DFE-B34F09F21562</generatorID>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8E075772-F428-B444-7A78-14D304EAB98F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6B3E605B-EC9D-4F73-E8B8-EF558D6C3401" name="PISCINA_TAMANNO_PISCINA_FK">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:54:47 UTC</createdTime>
+<generatorID>F0B5166A-7979-F9CC-2B26-07CC3AB95B38</generatorID>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="57927ECD-8135-B228-9DC0-B6029E9A4FD4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

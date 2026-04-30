@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_1" directorySegmentName="seg_0" id="76B30A1C-2AE4-0BE7-6160-C9C3747ABD7F">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:29:28 UTC</createdTime>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<engineerTo>
+<item key="2B743D31-43EA-687E-15D4-EB4E90F2EA7F" value="true"/>
+</engineerTo>
+<sourcePk>EBF21F39-3650-E71F-598F-B86FFBD0C6F8</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>265791DF-CFDA-AA8A-7DFC-A818CE31AC76</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>F81FE5DF-A012-7F1D-A358-60D5E00FC320</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

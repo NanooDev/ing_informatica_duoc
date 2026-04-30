@@ -1,0 +1,143 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="26E8180E-D271-2D4B-F549-F65F95FF4AAC" name="Documento">
+<createdBy>PC</createdBy>
+<createdTime>2025-10-27 00:37:27 UTC</createdTime>
+<ownerDesignName>Venta_Simplificada</ownerDesignName>
+<engineerTo>
+<item key="69EDA0DB-A850-88DB-5798-6A17C448B8C1" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Nro_Documento" id="168760E4-E6EA-61C3-18E1-94EC9689599A">
+<createdBy>PC</createdBy>
+<createdTime>2025-10-27 00:37:41 UTC</createdTime>
+<ownerDesignName>Venta_Simplificada</ownerDesignName>
+<engineerTo>
+<item key="69EDA0DB-A850-88DB-5798-6A17C448B8C1" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,8,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Fecha_Emision" id="2AF23040-E05B-06C2-D267-496301087F47">
+<createdBy>PC</createdBy>
+<createdTime>2025-10-27 00:38:16 UTC</createdTime>
+<ownerDesignName>Venta_Simplificada</ownerDesignName>
+<engineerTo>
+<item key="69EDA0DB-A850-88DB-5798-6A17C448B8C1" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Total_Bruto" id="B6F9F8F7-650F-4E5E-6768-4398B2EE958E">
+<createdBy>PC</createdBy>
+<createdTime>2025-10-27 00:38:46 UTC</createdTime>
+<ownerDesignName>Venta_Simplificada</ownerDesignName>
+<engineerTo>
+<item key="69EDA0DB-A850-88DB-5798-6A17C448B8C1" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Total_Iva" id="AF7D4EA1-AABF-EDAB-FDF6-22FFA5AE9D74">
+<createdBy>PC</createdBy>
+<createdTime>2025-10-27 00:39:08 UTC</createdTime>
+<ownerDesignName>Venta_Simplificada</ownerDesignName>
+<engineerTo>
+<item key="69EDA0DB-A850-88DB-5798-6A17C448B8C1" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Total_Neto" id="D85FE042-DAF6-7E3E-A6C2-1F52E0CEA78A">
+<createdBy>PC</createdBy>
+<createdTime>2025-10-27 00:39:27 UTC</createdTime>
+<ownerDesignName>Venta_Simplificada</ownerDesignName>
+<engineerTo>
+<item key="69EDA0DB-A850-88DB-5798-6A17C448B8C1" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Id_Tipo" id="1F62558F-6D2B-6E9F-C4F9-883550D27EC3">
+<createdBy>PC</createdBy>
+<createdTime>2025-10-27 00:43:16 UTC</createdTime>
+<generatorID>AE22957E-E613-D6A1-22B1-C1EAA7019263</generatorID>
+<ownerDesignName>Venta_Simplificada</ownerDesignName>
+<engineerTo>
+<item key="69EDA0DB-A850-88DB-5798-6A17C448B8C1" value="true"/>
+</engineerTo>
+<referedAttribute>B633D60D-F53E-A91C-D50D-7130B4026655</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>3</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Rut_Cliente" id="AA141034-2AD0-29C7-A5FA-D50EE6DA8268">
+<createdBy>PC</createdBy>
+<createdTime>2025-10-27 00:44:02 UTC</createdTime>
+<generatorID>B7E0B630-2D29-BD28-4C1D-283EA7A9E4E0</generatorID>
+<ownerDesignName>Venta_Simplificada</ownerDesignName>
+<engineerTo>
+<item key="69EDA0DB-A850-88DB-5798-6A17C448B8C1" value="true"/>
+</engineerTo>
+<referedAttribute>8807548E-CC2A-3BC4-6B6C-A69DD7189375</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Rut_Empleado" id="A94D6702-A32C-D152-F9D5-2124B66BDBA1">
+<createdBy>PC</createdBy>
+<createdTime>2025-10-27 00:55:37 UTC</createdTime>
+<generatorID>8912C117-07C8-D0CF-AF9F-759EB7E64A93</generatorID>
+<ownerDesignName>Venta_Simplificada</ownerDesignName>
+<engineerTo>
+<item key="69EDA0DB-A850-88DB-5798-6A17C448B8C1" value="true"/>
+</engineerTo>
+<referedAttribute>EA0B1A85-1FF7-1667-AE47-71F810840F60</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="328C4C06-5CF9-8247-8AA0-4E0C00D432AA" name="Boleta PK">
+<createdBy>PC</createdBy>
+<createdTime>2025-10-27 00:38:14 UTC</createdTime>
+<ownerDesignName>Venta_Simplificada</ownerDesignName>
+<engineerTo>
+<item key="69EDA0DB-A850-88DB-5798-6A17C448B8C1" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>168760E4-E6EA-61C3-18E1-94EC9689599A</attributeRef>
+<attributeRef>1F62558F-6D2B-6E9F-C4F9-883550D27EC3</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="A96FFBCC-F57E-E114-1776-D1D9110642AE" containerWithKeyObject="7AC862D6-6D41-7C3B-7A3F-0A26CE300A91" localFKIndex="6B3E605B-EC9D-4F73-E8B8-EF558D6C3401" name="PISCINA_TAMANNO_PISCINA_FK">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:54:47 UTC</createdTime>
+<generatorID>F0B5166A-7979-F9CC-2B26-07CC3AB95B38</generatorID>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<referredTableLongName>TAMANNO_PISCINA</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>13EA873A-1797-6E3B-28B2-E84840209EE6</referredTableID>
+<keyObject>2696200C-06F5-6764-777F-D00D4FBEBC91</keyObject>
+<referredKeyID>2696200C-06F5-6764-777F-D00D4FBEBC91</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_TAMANNO</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

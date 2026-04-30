@@ -1,0 +1,90 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B6DA4FA2-54FD-1B06-C5AE-8459ABC84DC0" name="Precios">
+<createdBy>PC</createdBy>
+<createdTime>2025-10-27 01:11:28 UTC</createdTime>
+<generatorID>6AE60A8D-0397-77A5-E4C5-BC4346DE194B</generatorID>
+<ownerDesignName>Venta_Simplificada</ownerDesignName>
+<ordsAlias>precio</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Fecha_Inicio" id="EE6192A4-FE2B-D408-D79A-D9B9397FC4DC">
+<createdBy>PC</createdBy>
+<createdTime>2025-10-27 01:11:28 UTC</createdTime>
+<generatorID>0BC8AE05-AD5F-15C8-53A1-B53586E79CEA</generatorID>
+<ownerDesignName>Venta_Simplificada</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Fecha_Fin" id="876F2EBD-42EF-2C69-76A6-869F01DC71E2">
+<createdBy>PC</createdBy>
+<createdTime>2025-10-27 01:11:28 UTC</createdTime>
+<generatorID>C73C5105-8A8D-0C89-4E60-BE5BFF03ADBB</generatorID>
+<ownerDesignName>Venta_Simplificada</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Precio" id="7ABCB1D6-24AD-1BB1-7420-5015314C8357">
+<createdBy>PC</createdBy>
+<createdTime>2025-10-27 01:11:28 UTC</createdTime>
+<generatorID>FCFA8145-2B03-27D2-0FAE-54715F2008B1</generatorID>
+<ownerDesignName>Venta_Simplificada</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Id_Producto" id="2C826961-FCA6-ED39-DD04-0D1A75D14067">
+<createdBy>PC</createdBy>
+<createdTime>2025-10-27 01:11:28 UTC</createdTime>
+<generatorID>4BC95673-8A3D-FFEB-BBE9-9FFC60F59A31</generatorID>
+<ownerDesignName>Venta_Simplificada</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B7D2A460-7008-8E57-81AF-6E7FD19D6187" referredColumn="2C3CE2EF-B563-EF72-084C-BD85B0810DD9"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="98C9EB91-C5B6-5C17-1110-7A9A08291B24" name="Precio_PK">
+<createdBy>PC</createdBy>
+<createdTime>2025-10-27 01:11:28 UTC</createdTime>
+<generatorID>BF2DF290-EB6C-AEFC-F6F8-B41B57A227F3</generatorID>
+<ownerDesignName>Venta_Simplificada</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EE6192A4-FE2B-D408-D79A-D9B9397FC4DC"/>
+<colUsage columnID="876F2EBD-42EF-2C69-76A6-869F01DC71E2"/>
+<colUsage columnID="2C826961-FCA6-ED39-DD04-0D1A75D14067"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7ECCFE6D-45D7-F1D8-83CD-158D2C173010" name="Producto_FK_Precio">
+<createdBy>PC</createdBy>
+<createdTime>2025-10-27 01:11:28 UTC</createdTime>
+<generatorID>FB7389A8-9C77-07D6-EBB4-576F1127A104</generatorID>
+<ownerDesignName>Venta_Simplificada</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2C826961-FCA6-ED39-DD04-0D1A75D14067"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

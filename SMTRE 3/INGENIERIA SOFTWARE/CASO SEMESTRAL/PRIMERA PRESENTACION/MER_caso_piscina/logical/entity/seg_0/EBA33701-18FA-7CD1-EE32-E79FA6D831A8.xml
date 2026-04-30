@@ -1,0 +1,76 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="EBA33701-18FA-7CD1-EE32-E79FA6D831A8" name="CLIENTE_EMPRESA">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 22:51:21 UTC</createdTime>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<engineerTo>
+<item key="2B743D31-43EA-687E-15D4-EB4E90F2EA7F" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="DIRECCION_FACTURACION" id="DA171D1F-B400-05B2-3B14-B9A42852A602">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 22:51:27 UTC</createdTime>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<engineerTo>
+<item key="2B743D31-43EA-687E-15D4-EB4E90F2EA7F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_CLIENTE" id="893B06DF-94F7-8CD8-E47D-1ED3B7FF2367">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:30:39 UTC</createdTime>
+<generatorID>BF32808F-9101-BBBF-E7C4-F51767DFA1FA</generatorID>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<engineerTo>
+<item key="2B743D31-43EA-687E-15D4-EB4E90F2EA7F" value="true"/>
+</engineerTo>
+<referedAttribute>CBD6E2FA-E8EB-B1F4-2715-B7DBBCCDD5B8</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_GIRO" id="352A5B53-1EE8-DF52-0E49-0EE7DE18A881">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:31:04 UTC</createdTime>
+<generatorID>BD571157-DCA9-A985-CE47-E47C807B6429</generatorID>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<engineerTo>
+<item key="2B743D31-43EA-687E-15D4-EB4E90F2EA7F" value="true"/>
+</engineerTo>
+<referedAttribute>5847B385-4B8E-A8C0-569A-8592F0C936B8</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="D5835688-818A-7718-FA77-7F274D995120" name="CLIENTE_EMPRESA PK">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:43:32 UTC</createdTime>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<engineerTo>
+<item key="2B743D31-43EA-687E-15D4-EB4E90F2EA7F" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>893B06DF-94F7-8CD8-E47D-1ED3B7FF2367</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

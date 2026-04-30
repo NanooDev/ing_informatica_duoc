@@ -1,0 +1,115 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="4771F3E3-0DED-9786-4A4E-94C7F6B07F66" name="LIBRO">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-03-15 23:22:22 UTC</createdTime>
+<ownerDesignName>modelo caso biblioteca</ownerDesignName>
+<engineerTo>
+<item key="CDD0B76E-2CE5-8EF0-42AB-B9854F801A35" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_LIBRO" id="C12B8CCC-246A-D4A3-7F7A-4867D748FD10">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-03-15 23:22:30 UTC</createdTime>
+<ownerDesignName>modelo caso biblioteca</ownerDesignName>
+<engineerTo>
+<item key="CDD0B76E-2CE5-8EF0-42AB-B9854F801A35" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="TITULO" id="95C670B9-B982-78B4-FC53-49ACB303B297">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-03-15 23:23:02 UTC</createdTime>
+<ownerDesignName>modelo caso biblioteca</ownerDesignName>
+<engineerTo>
+<item key="CDD0B76E-2CE5-8EF0-42AB-B9854F801A35" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="AUTOR" id="6819EE35-0E69-FA9E-20C5-7D68E7AD4F65">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-03-15 23:23:20 UTC</createdTime>
+<ownerDesignName>modelo caso biblioteca</ownerDesignName>
+<engineerTo>
+<item key="CDD0B76E-2CE5-8EF0-42AB-B9854F801A35" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ISBN" id="13F91C10-1551-EC72-7715-DC0940473639">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-03-15 23:24:46 UTC</createdTime>
+<ownerDesignName>modelo caso biblioteca</ownerDesignName>
+<engineerTo>
+<item key="CDD0B76E-2CE5-8EF0-42AB-B9854F801A35" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_CATEGORIA" id="5C1E0E15-7171-D304-1877-3A2D88493C50">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-03-16 01:16:57 UTC</createdTime>
+<generatorID>9CDDA989-5B67-C0FE-6BDE-5422CA8DE65C</generatorID>
+<ownerDesignName>modelo caso biblioteca</ownerDesignName>
+<engineerTo>
+<item key="CDD0B76E-2CE5-8EF0-42AB-B9854F801A35" value="true"/>
+</engineerTo>
+<referedAttribute>0794BDAE-7CA1-4F0B-5D53-7C0C8F09F23A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_ESTADO" id="BE53FE26-ABAF-3417-A5DE-194C25253A96">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-03-16 01:17:14 UTC</createdTime>
+<generatorID>DA9237F8-065A-2632-288C-5AAF1E16FCCB</generatorID>
+<ownerDesignName>modelo caso biblioteca</ownerDesignName>
+<engineerTo>
+<item key="CDD0B76E-2CE5-8EF0-42AB-B9854F801A35" value="true"/>
+</engineerTo>
+<referedAttribute>00E799B6-39A8-7D47-9912-E3D30F5073A1</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="F9899C1C-DB50-1A9E-CD35-4248E43B095A" name="LIBRO PK">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-03-15 23:23:00 UTC</createdTime>
+<ownerDesignName>modelo caso biblioteca</ownerDesignName>
+<engineerTo>
+<item key="CDD0B76E-2CE5-8EF0-42AB-B9854F801A35" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>C12B8CCC-246A-D4A3-7F7A-4867D748FD10</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

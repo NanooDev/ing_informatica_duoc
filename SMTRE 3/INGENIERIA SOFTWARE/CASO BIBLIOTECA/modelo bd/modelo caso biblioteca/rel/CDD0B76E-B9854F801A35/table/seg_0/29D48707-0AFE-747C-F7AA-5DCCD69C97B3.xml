@@ -1,0 +1,129 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="29D48707-0AFE-747C-F7AA-5DCCD69C97B3" name="LIBROS">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-03-16 01:19:25 UTC</createdTime>
+<generatorID>4771F3E3-0DED-9786-4A4E-94C7F6B07F66</generatorID>
+<ownerDesignName>modelo caso biblioteca</ownerDesignName>
+<ordsAlias>libro</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_LIBRO" id="F19B440F-C24D-C339-39DE-1A5D436807DC">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-03-16 01:19:25 UTC</createdTime>
+<generatorID>C12B8CCC-246A-D4A3-7F7A-4867D748FD10</generatorID>
+<ownerDesignName>modelo caso biblioteca</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TITULO" id="6E7618D2-E393-C0ED-E508-C11483E22CF4">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-03-16 01:19:25 UTC</createdTime>
+<generatorID>95C670B9-B982-78B4-FC53-49ACB303B297</generatorID>
+<ownerDesignName>modelo caso biblioteca</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="AUTOR" id="B34C1262-5FC4-B550-7773-AAD332147928">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-03-16 01:19:25 UTC</createdTime>
+<generatorID>6819EE35-0E69-FA9E-20C5-7D68E7AD4F65</generatorID>
+<ownerDesignName>modelo caso biblioteca</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ISBN" id="A7DDF62A-6B3E-EF7F-210C-A19D19F480AF">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-03-16 01:19:25 UTC</createdTime>
+<generatorID>13F91C10-1551-EC72-7715-DC0940473639</generatorID>
+<ownerDesignName>modelo caso biblioteca</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_CATEGORIA" id="A98BBA95-39E5-6211-C997-A67FDCD17F76">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-03-16 01:19:25 UTC</createdTime>
+<generatorID>5C1E0E15-7171-D304-1877-3A2D88493C50</generatorID>
+<ownerDesignName>modelo caso biblioteca</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="18230AF6-7D14-56D4-4152-FD66BDA1D295" referredColumn="147E0899-6430-2E05-56D9-4E1798457088"/>
+</associations>
+</Column>
+<Column name="ID_ESTADO" id="98655329-6731-BA31-BA35-3F0D5C2F1195">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-03-16 01:19:25 UTC</createdTime>
+<generatorID>BE53FE26-ABAF-3417-A5DE-194C25253A96</generatorID>
+<ownerDesignName>modelo caso biblioteca</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="05C52F56-8A53-ED86-715A-2AE9DF1B4C2C" referredColumn="82B579B9-7776-8F78-9989-BEB3F3A9552C"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B8DA9FD9-B43E-1D8E-2BEA-A056009062D2" name="LIBRO_PK">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-03-16 01:19:25 UTC</createdTime>
+<generatorID>F9899C1C-DB50-1A9E-CD35-4248E43B095A</generatorID>
+<ownerDesignName>modelo caso biblioteca</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F19B440F-C24D-C339-39DE-1A5D436807DC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="20C7D80C-1466-6CC6-5829-2D3F79456F9D" name="LIBRO_DETALLE_CATEGORIA_FK">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-03-16 01:19:25 UTC</createdTime>
+<generatorID>9CDDA989-5B67-C0FE-6BDE-5422CA8DE65C</generatorID>
+<ownerDesignName>modelo caso biblioteca</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A98BBA95-39E5-6211-C997-A67FDCD17F76"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="171A09E8-0C64-C8DA-F7B2-AE6E4B7CBD4A" name="LIBRO_DETALLE_ESTADO_FK">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-03-16 01:19:25 UTC</createdTime>
+<generatorID>DA9237F8-065A-2632-288C-5AAF1E16FCCB</generatorID>
+<ownerDesignName>modelo caso biblioteca</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="98655329-6731-BA31-BA35-3F0D5C2F1195"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

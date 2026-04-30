@@ -1,0 +1,59 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="24766B67-AF4B-EAA4-8C2B-1B0F964AAE6B" name="DETALLE_ESTADO">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-03-15 23:26:35 UTC</createdTime>
+<ownerDesignName>modelo caso biblioteca</ownerDesignName>
+<engineerTo>
+<item key="CDD0B76E-2CE5-8EF0-42AB-B9854F801A35" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_ESTADO" id="00E799B6-39A8-7D47-9912-E3D30F5073A1">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-03-15 23:26:40 UTC</createdTime>
+<ownerDesignName>modelo caso biblioteca</ownerDesignName>
+<engineerTo>
+<item key="CDD0B76E-2CE5-8EF0-42AB-B9854F801A35" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="NOMBRE" id="D100FB84-7D8E-38DE-21E9-24C80BB335BF">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-03-15 23:26:58 UTC</createdTime>
+<ownerDesignName>modelo caso biblioteca</ownerDesignName>
+<engineerTo>
+<item key="CDD0B76E-2CE5-8EF0-42AB-B9854F801A35" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="A294EDBA-DA46-B64B-D6FD-CA4C51B97630" name="DETALLE_ESTADO PK">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-03-15 23:26:56 UTC</createdTime>
+<ownerDesignName>modelo caso biblioteca</ownerDesignName>
+<engineerTo>
+<item key="CDD0B76E-2CE5-8EF0-42AB-B9854F801A35" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>00E799B6-39A8-7D47-9912-E3D30F5073A1</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

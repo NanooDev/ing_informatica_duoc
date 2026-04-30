@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="05C52F56-8A53-ED86-715A-2AE9DF1B4C2C" containerWithKeyObject="29D48707-0AFE-747C-F7AA-5DCCD69C97B3" localFKIndex="171A09E8-0C64-C8DA-F7B2-AE6E4B7CBD4A" name="LIBRO_DETALLE_ESTADO_FK">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-03-16 01:19:25 UTC</createdTime>
+<generatorID>DA9237F8-065A-2632-288C-5AAF1E16FCCB</generatorID>
+<ownerDesignName>modelo caso biblioteca</ownerDesignName>
+<referredTableLongName>DETALLE_ESTADOS</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>709CF923-529A-EA60-1F93-880CBE25D239</referredTableID>
+<keyObject>E0C26508-5EFD-6677-DDC9-CCC93956E87C</keyObject>
+<referredKeyID>E0C26508-5EFD-6677-DDC9-CCC93956E87C</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_ESTADO</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

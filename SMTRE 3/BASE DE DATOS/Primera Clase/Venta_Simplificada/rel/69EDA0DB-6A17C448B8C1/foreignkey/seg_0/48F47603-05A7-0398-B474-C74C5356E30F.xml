@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="48F47603-05A7-0398-B474-C74C5356E30F" containerWithKeyObject="AFA6D871-92E0-AD52-5116-2A118BC02D03" localFKIndex="082892C6-6271-89CB-9408-2CBB0D508506" name="Documento_FK_Detalle_Documento">
+<createdBy>PC</createdBy>
+<createdTime>2025-10-27 01:11:28 UTC</createdTime>
+<generatorID>94ACC062-B82E-CC5B-8768-FBA6E92071D2</generatorID>
+<ownerDesignName>Venta_Simplificada</ownerDesignName>
+<referredTableLongName>Documentos</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>D6A7F175-EF87-F2CF-33C1-B521A173D022</referredTableID>
+<keyObject>4AC8467C-B078-C10D-C77C-89728B5EB560</keyObject>
+<referredKeyID>4AC8467C-B078-C10D-C77C-89728B5EB560</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>Nro_Documento,Id_Tipo</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

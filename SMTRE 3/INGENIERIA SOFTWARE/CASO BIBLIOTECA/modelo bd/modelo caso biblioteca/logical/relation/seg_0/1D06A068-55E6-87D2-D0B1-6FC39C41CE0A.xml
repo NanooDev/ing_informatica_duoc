@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_1" directorySegmentName="seg_0" id="1D06A068-55E6-87D2-D0B1-6FC39C41CE0A">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-03-15 23:36:23 UTC</createdTime>
+<ownerDesignName>modelo caso biblioteca</ownerDesignName>
+<engineerTo>
+<item key="CDD0B76E-2CE5-8EF0-42AB-B9854F801A35" value="true"/>
+</engineerTo>
+<sourcePk>8F77F036-22AD-BF7C-3A6C-9CD27CD2894C</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>5E1B1BDC-A3E5-A940-9CAA-8FD2B76529FB</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>09538CC4-7BA8-FBA5-E692-6BB40F30F8FC</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

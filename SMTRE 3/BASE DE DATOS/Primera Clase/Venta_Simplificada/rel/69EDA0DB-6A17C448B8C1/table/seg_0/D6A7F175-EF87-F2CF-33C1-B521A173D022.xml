@@ -1,0 +1,168 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D6A7F175-EF87-F2CF-33C1-B521A173D022" name="Documentos">
+<createdBy>PC</createdBy>
+<createdTime>2025-10-27 01:11:28 UTC</createdTime>
+<generatorID>26E8180E-D271-2D4B-F549-F65F95FF4AAC</generatorID>
+<ownerDesignName>Venta_Simplificada</ownerDesignName>
+<ordsAlias>documento</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Nro_Documento" id="44AAC315-00E9-DD2D-F83F-4E97F213298F">
+<createdBy>PC</createdBy>
+<createdTime>2025-10-27 01:11:28 UTC</createdTime>
+<generatorID>168760E4-E6EA-61C3-18E1-94EC9689599A</generatorID>
+<ownerDesignName>Venta_Simplificada</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,8,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Fecha_Emision" id="4F457A00-A997-99F6-3BF1-32D1C0EC228E">
+<createdBy>PC</createdBy>
+<createdTime>2025-10-27 01:11:28 UTC</createdTime>
+<generatorID>2AF23040-E05B-06C2-D267-496301087F47</generatorID>
+<ownerDesignName>Venta_Simplificada</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Total_Bruto" id="54C886D0-6726-429A-AEB4-42584E1CFA22">
+<createdBy>PC</createdBy>
+<createdTime>2025-10-27 01:11:28 UTC</createdTime>
+<generatorID>B6F9F8F7-650F-4E5E-6768-4398B2EE958E</generatorID>
+<ownerDesignName>Venta_Simplificada</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Total_Iva" id="610674C0-31F4-4273-4CCC-83DDAFE80F78">
+<createdBy>PC</createdBy>
+<createdTime>2025-10-27 01:11:28 UTC</createdTime>
+<generatorID>AF7D4EA1-AABF-EDAB-FDF6-22FFA5AE9D74</generatorID>
+<ownerDesignName>Venta_Simplificada</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Total_Neto" id="7C4F44C9-E421-8B65-9BD1-AC2ADD32885A">
+<createdBy>PC</createdBy>
+<createdTime>2025-10-27 01:11:28 UTC</createdTime>
+<generatorID>D85FE042-DAF6-7E3E-A6C2-1F52E0CEA78A</generatorID>
+<ownerDesignName>Venta_Simplificada</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Id_Tipo" id="4C83464F-7C4F-AF6F-688D-4BFA2BE2D74A">
+<createdBy>PC</createdBy>
+<createdTime>2025-10-27 01:11:28 UTC</createdTime>
+<generatorID>1F62558F-6D2B-6E9F-C4F9-883550D27EC3</generatorID>
+<ownerDesignName>Venta_Simplificada</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>3</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9BD76189-E0B8-18F9-EE26-BA55AA39705B" referredColumn="5770102F-3E7B-803B-A2E9-D2CDFA7CBE33"/>
+</associations>
+</Column>
+<Column name="Rut_Cliente" id="0F272511-19E2-64BB-31C3-E756467AD5B7">
+<createdBy>PC</createdBy>
+<createdTime>2025-10-27 01:11:28 UTC</createdTime>
+<generatorID>AA141034-2AD0-29C7-A5FA-D50EE6DA8268</generatorID>
+<ownerDesignName>Venta_Simplificada</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="BC42C9B1-DDD8-73DA-300E-4BA16197CCA5" referredColumn="91060D52-B5FC-FB50-293B-9801066D94F0"/>
+</associations>
+</Column>
+<Column name="Rut_Empleado" id="FB457AB4-7C61-1C62-8DB1-008B4B8D6F37">
+<createdBy>PC</createdBy>
+<createdTime>2025-10-27 01:11:28 UTC</createdTime>
+<generatorID>A94D6702-A32C-D152-F9D5-2124B66BDBA1</generatorID>
+<ownerDesignName>Venta_Simplificada</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="85FD2676-5DF3-0EFD-BDD7-1BB7254E6A95" referredColumn="1121761A-8878-7F15-80A2-36A372E62339"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4AC8467C-B078-C10D-C77C-89728B5EB560" name="Boleta_PK">
+<createdBy>PC</createdBy>
+<createdTime>2025-10-27 01:11:28 UTC</createdTime>
+<generatorID>328C4C06-5CF9-8247-8AA0-4E0C00D432AA</generatorID>
+<ownerDesignName>Venta_Simplificada</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="44AAC315-00E9-DD2D-F83F-4E97F213298F"/>
+<colUsage columnID="4C83464F-7C4F-AF6F-688D-4BFA2BE2D74A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DACAE816-D7AB-9B25-2CC8-3037E28CA09D" name="Cliente_FK_Documento">
+<createdBy>PC</createdBy>
+<createdTime>2025-10-27 01:11:28 UTC</createdTime>
+<generatorID>B7E0B630-2D29-BD28-4C1D-283EA7A9E4E0</generatorID>
+<ownerDesignName>Venta_Simplificada</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0F272511-19E2-64BB-31C3-E756467AD5B7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5365FE85-E55F-F752-6806-A41ED5F5F776" name="Empleado_FK_Documento">
+<createdBy>PC</createdBy>
+<createdTime>2025-10-27 01:11:28 UTC</createdTime>
+<generatorID>8912C117-07C8-D0CF-AF9F-759EB7E64A93</generatorID>
+<ownerDesignName>Venta_Simplificada</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FB457AB4-7C61-1C62-8DB1-008B4B8D6F37"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CAC33800-4868-601A-8F02-00D1C622C9BF" name="Tipo_FK_Documento">
+<createdBy>PC</createdBy>
+<createdTime>2025-10-27 01:11:28 UTC</createdTime>
+<generatorID>AE22957E-E613-D6A1-22B1-C1EAA7019263</generatorID>
+<ownerDesignName>Venta_Simplificada</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4C83464F-7C4F-AF6F-688D-4BFA2BE2D74A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

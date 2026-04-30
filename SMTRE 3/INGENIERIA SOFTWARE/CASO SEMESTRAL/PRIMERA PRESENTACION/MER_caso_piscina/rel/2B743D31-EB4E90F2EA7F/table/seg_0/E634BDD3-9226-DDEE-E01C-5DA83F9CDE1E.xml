@@ -1,0 +1,132 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E634BDD3-9226-DDEE-E01C-5DA83F9CDE1E" name="CONFIGURACION_ACUERDO">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:54:47 UTC</createdTime>
+<generatorID>B8BE9FCB-966A-6819-9DAA-F1DECA7A442E</generatorID>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_CONFIG" id="4FD73B67-AB7D-75A2-23F4-F0DDB8E4883F">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:54:47 UTC</createdTime>
+<generatorID>E465264A-11FB-A2BF-6276-F9EA08B1E294</generatorID>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="VALOR_VISITA" id="7FAC5EAF-4888-681C-7A3D-872D243E6BFD">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:54:47 UTC</createdTime>
+<generatorID>B8A258E3-DCB7-F4A3-EB04-C7797CB9F02D</generatorID>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_ACUERDO" id="E902CB0F-FD6C-5D23-D201-B1FADE54EB28">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:54:47 UTC</createdTime>
+<generatorID>8E96B423-BCFA-806A-BCF0-5DBF47EFA8C9</generatorID>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="71EB4D80-E9CD-3ED1-A2B5-9AB64CC2D4CF" referredColumn="1D626546-138C-6B51-AC2F-2645BB205506"/>
+</associations>
+</Column>
+<Column name="ID_ESTACION" id="C939285B-515F-9571-49B3-FDE849441173">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:54:47 UTC</createdTime>
+<generatorID>D6831A57-1EDA-E6AA-EEE2-BCE6BE50219B</generatorID>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="06E19CC8-7718-7856-A8BF-179DF23499D8" referredColumn="75D9B26B-5629-941E-A114-73261D657C42"/>
+</associations>
+</Column>
+<Column name="ID_FRECUENCIA" id="FB731AFE-843D-33C2-F51F-03F70E414EBC">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:54:47 UTC</createdTime>
+<generatorID>77636A22-086F-B4BE-2300-149400A4F193</generatorID>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B6D33A61-5985-18A9-D6E5-4ABF71E603F4" referredColumn="6813288A-2717-1A47-6FD4-827570B5B2E9"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3B2B2532-E91D-34AC-6C92-3C72CE58A9E8" name="CONFIGURACION_ACUERDO_PK">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:54:47 UTC</createdTime>
+<generatorID>CF4ED53B-D204-C545-9C3A-4A0301EC6949</generatorID>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4FD73B67-AB7D-75A2-23F4-F0DDB8E4883F"/>
+<colUsage columnID="E902CB0F-FD6C-5D23-D201-B1FADE54EB28"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1211D5D2-BD12-774B-8B70-D5D4CE84D0B5" name="CONFIGURACION_ACUERDO_ACUERDO_MANTENCION_FK">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:54:47 UTC</createdTime>
+<generatorID>5AAD8BD7-D75E-522C-758D-55B01E1832D5</generatorID>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E902CB0F-FD6C-5D23-D201-B1FADE54EB28"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B2457E21-EE53-E215-E9B2-9383170BD740" name="CONFIGURACION_ACUERDO_ESTACION_FK">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:54:47 UTC</createdTime>
+<generatorID>1B58C107-A34E-DE9E-3C8B-86EF08F49E8D</generatorID>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C939285B-515F-9571-49B3-FDE849441173"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4D78645E-3FA7-79A7-BD46-E286BC88FE48" name="CONFIGURACION_ACUERDO_FRECUENCIA_MANTENCION_FK">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:54:47 UTC</createdTime>
+<generatorID>EDB6AE77-5D57-ABE9-E142-EDDD6F9D1D1A</generatorID>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FB731AFE-843D-33C2-F51F-03F70E414EBC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

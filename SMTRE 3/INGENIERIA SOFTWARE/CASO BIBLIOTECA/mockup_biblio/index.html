@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca de Universidad</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <section id="roleGateway" class="role-gateway">
+        <div class="role-gateway-card">
+            <h1>Biblioteca de Universidad</h1>
+            <p>Selecciona el tipo de usuario que ingresará al sistema.</p>
+
+            <div class="role-options">
+                <button class="role-option" onclick="iniciarSesion('estudiante')">
+                    <i class="fa-solid fa-user-graduate"></i>
+                    <strong>Estudiante</strong>
+                    <span>Perfil, catálogo, préstamos y devoluciones.</span>
+                </button>
+                <button class="role-option" onclick="iniciarSesion('profesor')">
+                    <i class="fa-solid fa-chalkboard-user"></i>
+                    <strong>Profesor</strong>
+                    <span>Perfil, catálogo, préstamos, usuarios y reportes.</span>
+                </button>
+                <button class="role-option" onclick="iniciarSesion('personal')">
+                    <i class="fa-solid fa-user-shield"></i>
+                    <strong>Personal</strong>
+                    <span>Acceso completo a toda la plataforma.</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <div id="dashboardContainer" class="dashboard-container is-hidden">
+        <nav class="sidebar">
+            <div class="logo">
+                <h2><i class="fa-solid fa-book-open-reader"></i> Biblioteca de Universidad</h2>
+            </div>
+            
+            <div class="user-info-sidebar" onclick="abrirPanelPerfil()" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault(); abrirPanelPerfil();}">
+                <i class="fa-solid fa-circle-user avatar"></i>
+                <div>
+                    <span id="sidebarUserName" class="user-name">Usuario</span>
+                    <span id="sidebarUserRole" class="user-role">Sin sesión iniciada</span>
+                </div>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#" class="active" data-section="catalogo" data-roles="estudiante,profesor,personal" onclick="showSection(event, 'catalogo')"><i class="fa-solid fa-magnifying-glass"></i> Catálogo en Línea</a></li>
+                <li><a href="#" data-section="prestamos" data-roles="estudiante,profesor,personal" onclick="showSection(event, 'prestamos')"><i class="fa-solid fa-handshake"></i> Préstamos y Devoluciones</a></li>
+                <li><a href="#" data-section="reservas" data-roles="estudiante,profesor,personal" onclick="showSection(event, 'reservas')"><i class="fa-solid fa-bookmark"></i> Reservas</a></li>
+                <li><a href="#" data-section="libros" data-roles="personal" onclick="showSection(event, 'libros')"><i class="fa-solid fa-book-bookmark"></i> Gestión de Libros</a></li>
+                <li><a href="#" data-section="usuarios" data-roles="profesor,personal" onclick="showSection(event, 'usuarios')"><i class="fa-solid fa-users"></i> Gestión de Usuarios</a></li>
+                <li><a href="#" data-section="reportes" data-roles="profesor,personal" onclick="showSection(event, 'reportes')"><i class="fa-solid fa-chart-line"></i> Reportes</a></li>
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            <header>
+                <div class="header-title">
+                    <h1>Sistema de Gestión de Biblioteca</h1>
+                </div>
+                <div class="header-actions">
+                    <button class="btn-profile-tab" onclick="abrirPanelPerfil()"><i class="fa-solid fa-id-card"></i> Mi Perfil</button>
+                    <button class="btn-logout" onclick="cerrarSesion()"><i class="fa-solid fa-arrow-right-from-bracket"></i> Cerrar sesión</button>
+                </div>
+            </header>
+
+            <div class="content-wrapper">
+                <section id="catalogo" class="content-section" data-roles="estudiante,profesor,personal" style="display: none;">
+                    <div class="section-header">
+                        <h2>Catálogo de Libros</h2>
+                        <p>Busque y reserve material bibliográfico.</p>
+                    </div>
+                    
+                    <div class="search-bar">
+                        <div class="search-input-group">
+                            <i class="fa-solid fa-search"></i>
+                            <input id="searchInput" type="text" placeholder="Busque por título, autor o ISBN...">
+                        </div>
+                        <select id="categoryFilter" class="filter-select">
+                            <option value="Todas">Todas las categorías</option>
+                        </select>
+                        <button id="searchButton" class="btn-primary">Buscar</button>
+                    </div>
+
+                    <p id="resultsCount" class="results-count">Mostrando 20 resultados</p>
+
+                    <div id="catalogCards" class="cards-grid"></div>
+                </section>
+
+                <section id="prestamos" class="content-section" data-roles="estudiante,profesor,personal" style="display: none;">
+                    <div class="section-header">
+                        <h2>Préstamos y Devoluciones</h2>
+                        <p>Registre un nuevo préstamo ingresando los datos correspondientes.</p>
+                    </div>
+                    <div class="form-container">
+                        <div class="form-group">
+                            <label>RUT del Usuario</label>
+                            <input id="loanRut" type="text" placeholder="Ej: 19.123.456-7">
+                        </div>
+                        <div class="form-group">
+                            <label>ISBN del Libro</label>
+                            <div class="isbn-scan-row">
+                                <input id="loanIsbn" type="text" placeholder="Ej: 978-1456287364">
+                                <button id="scanIsbnButton" type="button" class="btn-secondary" onclick="simularEscaneoIsbn()">
+                                    <i class="fa-solid fa-barcode"></i> Escanear ISBN
+                                </button>
+                            </div>
+                            <p id="scanStatus" class="scan-status">Simulación disponible: presiona "Escanear ISBN".</p>
+                        </div>
+                        <div class="form-group">
+                            <label>Fecha de Devolución</label>
+                            <input id="loanReturnDate" type="date">
+                        </div>
+                        <button class="btn-primary" onclick="registrarPrestamo()">Registrar Préstamo</button>
+                    </div>
+                </section>
+
+                <section id="reservas" class="content-section" data-roles="estudiante,profesor,personal" style="display: none;">
+                    <div class="section-header">
+                        <h2>Reservas</h2>
+                        <p>Historial de reservas con usuario y fecha de registro.</p>
+                    </div>
+
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Fecha</th>
+                                <th>Usuario</th>
+                                <th>Rol</th>
+                                <th>Libro</th>
+                                <th>ISBN</th>
+                            </tr>
+                        </thead>
+                        <tbody id="reservasTableBody"></tbody>
+                    </table>
+                </section>
+
+                <section id="libros" class="content-section" data-roles="personal" style="display: none;">
+                    <div class="section-header">
+                        <h2>Gestión de Libros</h2>
+                        <p>Inventario general de la biblioteca.</p>
+                    </div>
+                    <button id="openBookFormButton" class="btn-primary action-libros" style="margin-bottom: 15px;" onclick="mostrarFormularioLibro()">+ Agregar Libro</button>
+
+                    <div id="bookFormCard" class="mini-form-card" style="display: none;">
+                        <h3 id="bookFormTitle">Nuevo Libro</h3>
+                        <div class="mini-form-grid">
+                            <input id="bookIsbnInput" type="text" placeholder="ISBN">
+                            <input id="bookTitleInput" type="text" placeholder="Título">
+                            <input id="bookAuthorInput" type="text" placeholder="Autor">
+                            <input id="bookCategoryInput" type="text" placeholder="Categoría">
+                            <select id="bookStatusInput">
+                                <option value="Disponible">Disponible</option>
+                                <option value="No Disponible">No Disponible</option>
+                            </select>
+                        </div>
+                        <div class="mini-form-actions">
+                            <button class="btn-primary" onclick="guardarLibro()">Guardar</button>
+                            <button class="btn-outline" onclick="cancelarFormularioLibro()">Cancelar</button>
+                        </div>
+                        <p id="bookFormError" class="form-error" style="display: none;"></p>
+                    </div>
+
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>ISBN</th>
+                                <th>Título</th>
+                                <th>Autor</th>
+                                <th>Categoría</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="booksTableBody"></tbody>
+                    </table>
+                </section>
+
+                <section id="usuarios" class="content-section" data-roles="profesor,personal" style="display: none;">
+                    <div class="section-header">
+                        <h2>Gestión de Usuarios</h2>
+                        <p>Directorio de alumnos, profesores y personal activo.</p>
+                    </div>
+                    <button id="openUserFormButton" class="btn-primary action-usuarios" style="margin-bottom: 15px;" onclick="mostrarFormularioUsuario()">+ Nuevo Usuario</button>
+
+                    <div id="userFormCard" class="mini-form-card" style="display: none;">
+                        <h3 id="userFormTitle">Nuevo Usuario</h3>
+                        <div class="mini-form-grid">
+                            <input id="userRutInput" type="text" placeholder="RUT">
+                            <input id="userNameInput" type="text" placeholder="Nombre completo">
+                            <select id="userRoleInput">
+                                <option value="Estudiante">Estudiante</option>
+                                <option value="Profesor">Profesor</option>
+                                <option value="Personal">Personal</option>
+                            </select>
+                            <input id="userEmailInput" type="email" placeholder="Correo electrónico">
+                        </div>
+                        <div class="mini-form-actions">
+                            <button class="btn-primary" onclick="guardarUsuario()">Guardar</button>
+                            <button class="btn-outline" onclick="cancelarFormularioUsuario()">Cancelar</button>
+                        </div>
+                        <p id="userFormError" class="form-error" style="display: none;"></p>
+                    </div>
+
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>RUT</th>
+                                <th>Nombre Completo</th>
+                                <th>Rol</th>
+                                <th>Correo Electrónico</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="usersTableBody"></tbody>
+                    </table>
+                </section>
+
+                <section id="reportes" class="content-section" data-roles="profesor,personal" style="display: none;">
+                    <div class="section-header">
+                        <h2>Reportes y Estadísticas</h2>
+                        <p>Resumen general del mes.</p>
+                    </div>
+                    <div class="cards-grid">
+                        <div class="resource-card" style="padding: 20px; text-align: center;">
+                            <i class="fa-solid fa-book" style="font-size: 2rem; color: var(--accent-blue); margin-bottom: 10px;"></i>
+                            <h3>1,245</h3>
+                            <p class="text-muted">Libros Totales</p>
+                        </div>
+                        <div class="resource-card" style="padding: 20px; text-align: center;">
+                            <i class="fa-solid fa-users" style="font-size: 2rem; color: var(--accent-yellow); margin-bottom: 10px;"></i>
+                            <h3>342</h3>
+                            <p class="text-muted">Usuarios Activos</p>
+                        </div>
+                        <div class="resource-card" style="padding: 20px; text-align: center;">
+                            <i class="fa-solid fa-hand-holding-hand" style="font-size: 2rem; color: #137333; margin-bottom: 10px;"></i>
+                            <h3>89</h3>
+                            <p class="text-muted">Préstamos este mes</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <div id="loanTicketModal" class="modal-overlay" aria-hidden="true">
+        <div class="ticket-modal" role="dialog" aria-modal="true" aria-labelledby="ticketTitle">
+            <button class="ticket-close" onclick="cerrarTicketPrestamo()" aria-label="Cerrar ticket">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="ticket-header">
+                <h3 id="ticketTitle">Comprobante de Préstamo</h3>
+                <p>Biblioteca de Universidad</p>
+            </div>
+
+            <div class="ticket-code" id="ticketCode">#PREST-000000</div>
+
+            <div class="ticket-details">
+                <div><span>RUT Usuario</span><strong id="ticketRut">-</strong></div>
+                <div><span>ISBN Libro</span><strong id="ticketIsbn">-</strong></div>
+                <div><span>Fecha de Emisión</span><strong id="ticketIssueDate">-</strong></div>
+                <div><span>Fecha de Devolución</span><strong id="ticketReturnDate">-</strong></div>
+            </div>
+
+            <div class="ticket-footer">
+                <p>Guarda este comprobante para cualquier consulta sobre el préstamo.</p>
+                <button class="btn-outline" onclick="window.print()">
+                    <i class="fa-solid fa-print"></i> Imprimir Ticket
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="profilePanelModal" class="modal-overlay" aria-hidden="true">
+        <div class="profile-panel" role="dialog" aria-modal="true" aria-labelledby="profilePanelTitle">
+            <button class="ticket-close" onclick="cerrarPanelPerfil()" aria-label="Cerrar perfil">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="section-header">
+                <h2 id="profilePanelTitle">Mi Perfil</h2>
+                <p>Información del usuario con sesión activa.</p>
+            </div>
+            <div class="profile-card">
+                <div class="profile-title">
+                    <i class="fa-solid fa-circle-user"></i>
+                    <div>
+                        <h3 id="profilePanelName">Usuario</h3>
+                        <p id="profilePanelRole">Rol no definido</p>
+                    </div>
+                </div>
+                <div class="profile-details">
+                    <div>
+                        <span>Correo</span>
+                        <strong id="profilePanelEmail">usuario@universidad.cl</strong>
+                    </div>
+                    <div>
+                        <span>Sede</span>
+                        <strong id="profilePanelCampus">Universidad - Biblioteca Central</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

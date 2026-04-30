@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="3AA7244D-4BC8-87BC-1DF2-1D0B7412BF1A" containerWithKeyObject="FB320994-A948-F0DD-22DC-27A0A61C3B5D" localFKIndex="EE630AA1-4F39-47E7-6847-5CE827D9220F" name="VISITA_PROGRAMADA_ACUERDO_MANTENCION_FK">
+<createdBy>Mariano</createdBy>
+<createdTime>2026-04-04 23:54:47 UTC</createdTime>
+<generatorID>48CE8B0D-48CC-44A3-99BB-68559C59F396</generatorID>
+<ownerDesignName>MER_caso_piscina</ownerDesignName>
+<referredTableLongName>ACUERDO_MANTENCION</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>A65B34AD-2609-71BB-2A04-A7118E5FA02C</referredTableID>
+<keyObject>BB49EF2E-D432-B930-FD58-8807D1926CF8</keyObject>
+<referredKeyID>BB49EF2E-D432-B930-FD58-8807D1926CF8</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_ACUERDO</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
