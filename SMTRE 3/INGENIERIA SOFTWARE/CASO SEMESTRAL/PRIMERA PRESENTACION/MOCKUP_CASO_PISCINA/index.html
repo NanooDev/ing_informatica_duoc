@@ -3,75 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mockup - Verano Perfecto</title>
+    <title>Verano Perfecto - Panel de Control</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="sidebar">
-        <h2>Verano Perfecto</h2>
-        <nav>
-            <a href="#" class="active">Panel de Control</a>
-            <a href="#">Rutas de Hoy</a>
-            <a href="#">Inventario</a>
-            <a href="#">Clientes</a>
-        </nav>
+    <div class="app-container">
+        <!-- Panel Lateral -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <!-- Se asume que guardarás la imagen como "logo.png" en esta misma carpeta -->
+                <img src="logo.png" alt="Logo Verano Perfecto" class="logo-img">
+                <h2 class="sidebar-title">Verano Perfecto</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="active"><span class="nav-icon">📊</span> Panel de Control</a>
+                <a href="#"><span class="nav-icon">📍</span> Rutas de Hoy</a>
+                <a href="#"><span class="nav-icon">�</span> Reportes Técnicos</a>
+                <a href="#"><span class="nav-icon">👥</span> Clientes</a>
+            </nav>
+        </aside>
+
+        <!-- Contenido Principal -->
+        <main class="main-content">
+            <header class="header-top">
+                <div class="header-text-group">
+                    <h1>Gestión de Mantenciones en Tiempo Real</h1>
+                    <p class="subtitle">Monitoreo general de estado y operaciones</p>
+                </div>
+                <div class="user-info">
+                    <span class="user-avatar">M</span>
+                    <span>Rol: Supervisor (Mariano)</span>
+                </div>
+            </header>
+
+            <!-- Alerta de Servicio -->
+            <div class="alert-banner">
+                <span class="alert-icon">⚠️</span>
+                <span class="alert-text"><strong>ALERTA EN TERRENO:</strong> Bomba fallando en "Condominio Central".</span>
+                <button class="btn-alert">Asignar Reparación</button>
+            </div>
+
+            <!-- Tarjetas de Resumen -->
+            <section class="summary-cards">
+                <div class="card card-neutral">
+                    <div class="card-icon">📋</div>
+                    <h3>Mantenciones Hoy</h3>
+                    <div class="card-value">12</div>
+                </div>
+                <div class="card card-blue">
+                    <div class="card-icon">🔄</div>
+                    <h3>En Proceso</h3>
+                    <div class="card-value blue">4</div>
+                </div>
+                <div class="card card-green">
+                    <div class="card-icon">✅</div>
+                    <h3>Finalizadas</h3>
+                    <div class="card-value green">8</div>
+                </div>
+            </section>
+
+            <!-- Tabla de Estatus -->
+            <section class="table-section">
+                <div class="section-header">
+                    <h2>Estatus de Mantenciones <span>(Ruta Optimizada)</span></h2>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Cliente / Dirección</th>
+                                <th>Tipo Piscina</th>
+                                <th>Estado</th>
+                                <th>Reporte Operativo</th>
+                                <th>Acción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <strong>Condominio Central</strong><br>
+                                    <span class="address">Av. Las Torres 123</span>
+                                </td>
+                                <td>Grande (25 min)</td>
+                                <td><span class="tag tag-warning">En Proceso</span></td>
+                                <td>Revisión de Bomba</td>
+                                <td><button class="btn-action">Ver Detalles</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Familia Gómez</strong><br>
+                                    <span class="address">Calle El Sol 45</span>
+                                </td>
+                                <td>Familiar (15 min)</td>
+                                <td><span class="tag tag-success">Efectuado</span></td>
+                                <td>Limpieza + Nivelado pH</td>
+                                <td><button class="btn-action">Ver Reporte</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
     </div>
-
-    <main class="content">
-        <header>
-            <h1>Gestión de Mantenciones en Tiempo Real</h1>
-            <div class="user-info">Rol: Supervisor (Mariano)</div>
-        </header>
-
-        <div class="alert warning">
-            <strong>⚠️ ALERTA DE STOCK:</strong> Quedan 480 pastillas de cloro. <button>Generar Orden de Compra</button>
-        </div>
-
-        <section class="status-cards">
-            <div class="card">
-                <h3>Mantenciones Hoy</h3>
-                <p class="number">12</p>
-            </div>
-            <div class="card">
-                <h3>En Proceso</h3>
-                <p class="number blue">4</p>
-            </div>
-            <div class="card">
-                <h3>Finalizadas</h3>
-                <p class="number green">8</p>
-            </div>
-        </section>
-
-        <section class="main-table">
-            <h3>Estatus de Mantenciones (Ruta Optimizada)</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Cliente / Dirección</th>
-                        <th>Tipo Piscina</th>
-                        <th>Estado</th>
-                        <th>Insumos Usados</th>
-                        <th>Acción</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Condominio Central</strong><br>Av. Las Torres 123</td>
-                        <td>Grande (25 min)</td>
-                        <td><span class="tag in-progress">En Proceso</span></td>
-                        <td>2 Pastillas Cloro</td>
-                        <td><button class="btn-view">Ver Detalles</button></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Familia Gómez</strong><br>Calle El Sol 45</td>
-                        <td>Familiar (15 min)</td>
-                        <td><span class="tag completed">Efectuado</span></td>
-                        <td>1 Pastilla Cloro</td>
-                        <td><button class="btn-view">Ver Reporte</button></td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-    </main>
 </body>
 </html>
