@@ -77,7 +77,7 @@ Asegúrate de tener instalado:
 
 #### 1️⃣ Clonar el Repositorio
 ```bash
-git clone https://github.com/tu-usuario/ing_informatica_duoc.git
+git clone https://github.com/NanooDev/ing_informatica_duoc.git
 cd ing_informatica_duoc
 ```
 
