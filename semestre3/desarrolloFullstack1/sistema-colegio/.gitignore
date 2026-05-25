@@ -1,0 +1,11 @@
+# Ignorar datos de la base de datos
+**/datos_mysql/
+
+# Ignorar archivos de configuración de IntelliJ
+.idea/
+*.iml
+out/
+target/
+
+# Ignorar archivos temporales
+*.log
