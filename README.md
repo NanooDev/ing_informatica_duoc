@@ -17,7 +17,7 @@ Repositorio central que documenta mi trayecto académico en la carrera de **Inge
 ## 🚀 Proyectos Destacados
 
 ### **Sistema de Gestión de Biblioteca**
-- **Ubicación:** `SMTRE 3/INGENIERIA SOFTWARE/CASO BIBLIOTECA/`
+- **Ubicación:** `semestre3/ingenieriaSoftware/experienciaAprendizaje1/casobiblioteca/`
 - **Descripción:** Sistema completo de gestión bibliográfica con múltiples roles de usuario (Estudiante, Profesor, Personal).
 - **Características:**
   - Catálogo en línea con búsqueda y filtrado
@@ -29,7 +29,7 @@ Repositorio central que documenta mi trayecto académico en la carrera de **Inge
 - **Tecnologías:** HTML5, CSS3, JavaScript, Oracle Data Modeler
 
 ### **Sistema de Gestión de Piscina**
-- **Ubicación:** `SMTRE 3/INGENIERIA SOFTWARE/CASO SEMESTRAL/`
+- **Ubicación:** `semestre3/ingenieriaSoftware/casoSemestral/`
 - **Descripción:** Caso de estudio semestral de un sistema integral de gestión de piscina.
 - **Características:**
   - Diseño de modelo entidad-relación (MER)
@@ -38,7 +38,7 @@ Repositorio central que documenta mi trayecto académico en la carrera de **Inge
 - **Tecnologías:** Oracle Data Modeler, SQL
 
 ### **Sistema de Gestión de Colegio (Microservicios)**
-- **Ubicación:** `SMTRE 3/DESARROLLOFULLSTACK1/sistema-colegio/`
+- **Ubicación:** `semestre3/desarrolloFullstack1/sistemaColegio/`
 - **Descripción:** Arquitectura de microservicios para la gestión académica de un colegio.
 - **Características:**
   - Servicio de estudiantes independiente
@@ -48,12 +48,12 @@ Repositorio central que documenta mi trayecto académico en la carrera de **Inge
 - **Tecnologías:** Java, Spring Boot, Maven, MySQL, Docker, Docker Compose, Git
 
 ### **Sistema de Gestión de Productos y Clientes**
-- **Ubicación:** `SMTRE 3/DESARROLLOFULLSTACK1/fullstack-i-productos-main/` y `fullstack-i-clientes-main/`
+- **Ubicación:** `semestre3/desarrolloFullstack1/fullstackIProductosMain/` y `semestre3/desarrolloFullstack1/fullstackIClientesMain/`
 - **Descripción:** Aplicaciones full stack independientes para la gestión de catálogos de productos y base de clientes.
 - **Tecnologías:** Java, Spring Boot, JPA/Hibernate, MySQL, Maven
 
 ### **Actividades de Base de Datos**
-- **Ubicación:** `SMTRE 3/BASE DE DATOS/`
+- **Ubicación:** `semestre3/baseDeDatos2/`
 - **Proyectos incluidos:**
   - Truck Rental Database
   - IP Futuro Database
@@ -94,8 +94,8 @@ mysql --version
 
 #### 3️⃣ Clonar Repositorios de Base de Datos
 ```bash
-cd "SMTRE 3/BASE DE DATOS"
-# Cada carpeta contiene archivos .sql para crear y poblar las bases de datos
+cd "semestre3/baseDeDatos2"
+# Cada carpeta contiene archivos .sql, .docx y modelos para las actividades de base de datos
 ```
 
 #### 4️⃣ Importar Base de Datos en MySQL
@@ -106,7 +106,7 @@ mysql -u root -p < ruta/al/archivo.sql
 
 #### 5️⃣ Configurar Proyectos Full Stack
 ```bash
-cd "SMTRE 3/DESARROLLOFULLSTACK1/sistema-colegio"
+cd "semestre3/desarrolloFullstack1/sistemaColegio"
 # Construir con Maven
 mvn clean install
 # Ejecutar
@@ -116,13 +116,13 @@ mvn spring-boot:run
 #### 6️⃣ Abrir Mockups en Navegador
 ```bash
 # Para el caso de Biblioteca
-cd "SMTRE 3/INGENIERIA SOFTWARE/CASO BIBLIOTECA/mockup_biblio"
+cd "semestre3/ingenieriaSoftware/experienciaAprendizaje1/casobiblioteca/mockupbiblio"
 # Abre index.html en tu navegador favorito
 ```
 
 #### 7️⃣ Usar Docker (Opcional)
 ```bash
-cd "SMTRE 3/DESARROLLOFULLSTACK1/sistema-colegio"
+cd "semestre3/desarrolloFullstack1/sistemaColegio"
 docker-compose up
 ```
 
@@ -149,11 +149,11 @@ docker-compose up
 
 ```
 ing_informatica_duoc/
-├── SMTRE 3/
-│   ├── BASE DE DATOS/           # Ejercicios y casos de diseño BD
-│   ├── DESARROLLOFULLSTACK1/    # Proyectos Java + Spring Boot
-│   ├── INGENIERIA SOFTWARE/     # Casos de estudio y mockups
-│   └── CLASE ACT 2.2/           # Actividades complementarias
+├── semestre3/
+│   ├── baseDeDatos2/            # Ejercicios y casos de diseño BD
+│   ├── desarrolloFullstack1/    # Proyectos Java + Spring Boot
+│   ├── ingenieriaSoftware/      # Casos de estudio y mockups
+│   └── claseAct22/              # Actividades complementarias
 ├── LICENSE                       # Licencia del proyecto
 └── README.md                     # Este archivo
 ```
