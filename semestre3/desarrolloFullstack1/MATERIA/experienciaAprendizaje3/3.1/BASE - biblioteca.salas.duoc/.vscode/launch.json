@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-Application<biblioteca.salas.duoc>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "biblioteca.salas.duoc.biblioteca.salas.duoc.Application",
+            "projectName": "biblioteca.salas.duoc",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
