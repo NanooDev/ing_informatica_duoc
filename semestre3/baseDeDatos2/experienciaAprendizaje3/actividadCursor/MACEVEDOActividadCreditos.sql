@@ -1,3 +1,4 @@
+--- FORMA DE MARIANO
 DECLARE
    --
    CURSOR r_cliente IS
@@ -56,8 +57,7 @@ BEGIN
       DBMS_OUTPUT.PUT_LINE('Saldo    : [' || TO_CHAR(c_cliente.Saldo  ,'$999G999G999')  || ']');
       DBMS_OUTPUT.PUT_LINE('-------------------------------------');
       cont_cli := cont_cli + 1;
-      -- PENDIENTE!!!!!!!!!!!!
-      ELSIF c_cliente.Credito between 300000 and 999999 then
+      IF c_cliente.Credito between 0 and 999999 then
         cont_rango1 := cont_rango1 + 1;
       ELSIF c_cliente.Credito between 1000000 and 1999999 then
         cont_rango2 := cont_rango2 + 1;
