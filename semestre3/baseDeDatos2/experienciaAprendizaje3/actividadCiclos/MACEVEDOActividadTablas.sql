@@ -8,7 +8,7 @@ BEGIN
         
         FOR i IN 1 .. 3 LOOP
             
-            v_linea := v_linea || i || ' x ' || x || ' = ' || (i * x) || '          ';
+            v_linea := v_linea || i || ' x ' || x || ' = ' || (i * x) || '             ';
         END LOOP;
         
         DBMS_OUTPUT.PUT_LINE(v_linea);
@@ -23,7 +23,7 @@ BEGIN
         v_linea := ''; 
         
         FOR i IN 4 .. 6 LOOP
-            v_linea := v_linea || i || ' x ' || x || ' = ' || (i * x) || '          ';
+            v_linea := v_linea || i || ' x ' || x || ' = ' || (i * x) || '             ';
         END LOOP;
         
         DBMS_OUTPUT.PUT_LINE(v_linea);
