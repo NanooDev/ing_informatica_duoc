@@ -1,0 +1,146 @@
+-- Ejercicio 3 --
+
+  -- 3. REQUERIMIENTO: Salida estadística (Fig 2)
+    DBMS_OUTPUT.PUT_LINE('======================================================');
+    DBMS_OUTPUT.PUT_LINE('ESTADÍSTICAS DEL PROCESO DE REGULARIZACIÓN (FASE 1)');
+    DBMS_OUTPUT.PUT_LINE('======================================================');
+    DBMS_OUTPUT.PUT_LINE('Año de evaluación:                  ' || v_anno_evaluado);
+    DBMS_OUTPUT.PUT_LINE('Tabla destino generada:             ' || v_tabla_destino);
+    DBMS_OUTPUT.PUT_LINE('Cantidad de registros procesados:   ' || v_cont_procesados);
+    DBMS_OUTPUT.PUT_LINE('Total de descuentos otorgados:     $' || TO_CHAR(ROUND(v_suma_descuentos), '999G999G999'));
+    DBMS_OUTPUT.PUT_LINE('======================================================');
+END;
+/
+
+--3.2
+--inicializar variables BIND en la consola de base de datos
+VARIABLE b_desc_ab NUMBER;
+VARIABLE b_desc_cd NUMBER;
+
+EXEC :b_desc_ab := 0.10;
+EXEC :b_desc_cd := 0.20;
+
+DECLARE
+    v_anno_evaluado NUMBER;
+    
+    -- Variables para el informe estadístico (Fig 4)
+    v_cant_tramo_ab   NUMBER := 0;
+    v_cant_tramo_cd   NUMBER := 0;
+    v_total_rebajado  NUMBER := 0;
+
+    -- Cursor dinámico para evitar validaciones rígidas en compilación
+    v_cursor          SYS_REFCURSOR;
+    v_sql_query       VARCHAR2(2000);
+
+    -- Variables de soporte para capturar los datos dinámicamente
+    v_ate_id          NUMBER(10);
+    v_fecha_venc      DATE;
+    v_monto_atencion  NUMBER(10);
+    v_tramo_salud     VARCHAR2(100);
+    v_especialidad    VARCHAR2(100);
+    v_rut_paciente    VARCHAR2(25);
+
+    v_porc_aplicado  NUMBER := 0;
+    v_monto_desc     NUMBER := 0;
+    v_monto_final    NUMBER := 0;
+    v_obs_fase2      VARCHAR2(150);
+BEGIN
+    -- Determinar automáticamente el año anterior al actual
+    v_anno_evaluado := EXTRACT(YEAR FROM SYSDATE) - 1;
+
+    -- REQUERIMIENTO: Generar de forma limpia la tabla pago_atencion_fase2
+    BEGIN
+        EXECUTE IMMEDIATE 'DROP TABLE PAGO_ATENCION_FASE2';
+    EXCEPTION WHEN OTHERS THEN NULL;
+    END;
+
+    EXECUTE IMMEDIATE 'CREATE TABLE PAGO_ATENCION_FASE2 (
+        ate_id NUMBER(10) NOT NULL,
+        rut_paciente VARCHAR2(15),
+        especialidad VARCHAR2(50),
+        tramo_fonasa VARCHAR2(50),
+        monto_original NUMBER(10),
+        monto_con_descuento NUMBER(10),
+        observacion VARCHAR2(100)
+    )';
+
+    -- Construcción del Query Dinámico tolerante a fallos de esquema previo
+    v_sql_query := 'SELECT 
+                        pa.ate_id,
+                        pa.fecha_venc_pago,
+                        pa.monto_atencion,
+                        s.descripcion,
+                        e.nombre,
+                        p.pac_run || ''-'' || p.dv_run
+                    FROM PAGO_ATENCION pa
+                    JOIN ATENCION a ON pa.ate_id = a.ate_id
+                    JOIN PACIENTE p ON a.pac_run = p.pac_run
+                    JOIN SALUD s ON p.sal_id = s.sal_id
+                    JOIN ESPECIALIDAD e ON a.esp_id = e.esp_id
+                    WHERE EXTRACT(YEAR FROM pa.fecha_venc_pago) = :anno
+                      AND e.nombre IN (''Medicina General'', ''Pediatría'', ''Kinesiología'', ''Obstetricia'', ''Cardiología'')
+                    ORDER BY pa.ate_id ASC';
+
+    -- Abrir y procesar la información del modelo físico
+    OPEN v_cursor FOR v_sql_query USING v_anno_evaluado;
+    LOOP
+        FETCH v_cursor INTO v_ate_id, v_fecha_venc, v_monto_atencion, v_tramo_salud, v_especialidad, v_rut_paciente;
+        EXIT WHEN v_cursor%NOTFOUND;
+        
+        -- Lógica condicional estricta según el tramo de Fonasa utilizando UPPER para evitar fallas de texto
+        IF UPPER(v_tramo_salud) LIKE '%TRAMO A%' OR UPPER(v_tramo_salud) LIKE '%TRAMO B%' THEN
+            v_porc_aplicado := :b_desc_ab;
+            v_cant_tramo_ab := v_cant_tramo_ab + 1;
+            v_obs_fase2 := 'Beneficio Regularización Fonasa A/B - Rebaja del ' || (v_porc_aplicado * 100) || '%';
+            
+        ELSIF UPPER(v_tramo_salud) LIKE '%TRAMO C%' OR UPPER(v_tramo_salud) LIKE '%TRAMO D%' THEN
+            v_porc_aplicado := :b_desc_cd;
+            v_cant_tramo_cd := v_cant_tramo_cd + 1;
+            v_obs_fase2 := 'Beneficio Regularización Fonasa C/D - Rebaja del ' || (v_porc_aplicado * 100) || '%';
+            
+        ELSE
+            v_porc_aplicado := 0;
+            v_obs_fase2 := 'Sin descuento aplicable para este tramo';
+        END IF;
+
+        -- Cálculos financieros
+        IF v_porc_aplicado > 0 THEN
+            v_monto_desc     := v_monto_atencion * v_porc_aplicado;
+            v_monto_final    := ROUND(v_monto_atencion - v_monto_desc);
+            v_total_rebajado := v_total_rebajado + v_monto_desc;
+        ELSE
+            v_monto_final    := v_monto_atencion;
+        END IF;
+
+        -- Inserción directa en caliente de los resultados corregidos
+        EXECUTE IMMEDIATE 'INSERT INTO PAGO_ATENCION_FASE2 (ate_id, rut_paciente, especialidad, tramo_fonasa, monto_original, monto_con_descuento, observacion) 
+                           VALUES (:1, :2, :3, :4, :5, :6, :7)'
+        USING v_ate_id, v_rut_paciente, v_especialidad, v_tramo_salud, v_monto_atencion, v_monto_final, v_obs_fase2;
+
+    END LOOP;
+    CLOSE v_cursor;
+
+    COMMIT;
+
+    -- REQUERIMIENTO: Mostrar salida estadística exacta en pantalla (Fig 4)
+    DBMS_OUTPUT.PUT_LINE('======================================================');
+    DBMS_OUTPUT.PUT_LINE('ESTADÍSTICAS DEL PROCESO DE MANTENCIÓN - FASE 2');
+    DBMS_OUTPUT.PUT_LINE('======================================================');
+    DBMS_OUTPUT.PUT_LINE('Año vencimiento evaluado:           ' || v_anno_evaluado);
+    DBMS_OUTPUT.PUT_LINE('Pacientes Fonasa A/B procesados:     ' || v_cant_tramo_ab);
+    DBMS_OUTPUT.PUT_LINE('Pacientes Fonasa C/D procesados:     ' || v_cant_tramo_cd);
+    DBMS_OUTPUT.PUT_LINE('Total de rebajas monetarias:        $' || TO_CHAR(ROUND(v_total_rebajado), '999G999G999'));
+    DBMS_OUTPUT.PUT_LINE('======================================================');
+END;
+/
+
+SELECT 
+    ate_id AS "ID ATENCIÓN",
+    rut_paciente AS "RUT PACIENTE",
+    especialidad AS "ESPECIALIDAD",
+    tramo_fonasa AS "TRAMO SALUD",
+    monto_original AS "MONTO ORIGINAL",
+    monto_con_descuento AS "MONTO CON DESC.",
+    observacion AS "OBSERVACIÓN"
+FROM PAGO_ATENCION_FASE2
+ORDER BY ate_id ASC;

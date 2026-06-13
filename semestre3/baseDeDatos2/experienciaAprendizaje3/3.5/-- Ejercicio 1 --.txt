@@ -1,0 +1,126 @@
+-- Ejercicio 1 --
+
+DECLARE
+    -- Definición de VARRAY para las multas por día de atraso
+    TYPE tipo_varray_multas IS VARRAY(7) OF NUMBER;
+    v_multas tipo_varray_multas := tipo_varray_multas(1200, 1300, 1700, 1900, 1100, 2000, 2300);
+
+    -- Cursor Explícito con ordenamiento solicitado por la guía
+    CURSOR c_morosos(p_anno NUMBER) IS
+        SELECT 
+            p.pac_run,
+            p.dv_run,
+            p.pnombre || ' ' || p.snombre || ' ' || p.apaterno || ' ' || p.amaterno AS nombre_completo,
+            EXTRACT(YEAR FROM p.fecha_nacimiento) AS anno_nac,
+            a.ate_id,
+            pa.fecha_venc_pago,
+            pa.fecha_pago,
+            (pa.fecha_pago - pa.fecha_venc_pago) AS dias_atraso_calc,
+            e.nombre AS especialidad_nom
+        FROM PACIENTE p
+        JOIN ATENCION a ON p.pac_run = a.pac_run
+        JOIN PAGO_ATENCION pa ON a.ate_id = pa.ate_id
+        JOIN ESPECIALIDAD e ON a.esp_id = e.esp_id
+        WHERE EXTRACT(YEAR FROM pa.fecha_pago) = p_anno - 1
+          AND pa.fecha_pago > pa.fecha_venc_pago
+        ORDER BY pa.fecha_venc_pago ASC, p.apaterno ASC;
+
+    -- Registro PL/SQL para almacenar cálculos intermedios
+    TYPE reg_procesamiento IS RECORD (
+        v_monto_multa NUMBER,
+        v_porc_desc   NUMBER := 0
+    );
+    r_calculo reg_procesamiento;
+
+    v_anno_actual NUMBER;
+    v_edad NUMBER;
+    v_multa_dia NUMBER;
+    v_monto_total NUMBER;
+BEGIN
+    -- 1. Truncar la tabla de destino antes de procesar de forma dinámica
+    EXECUTE IMMEDIATE 'TRUNCATE TABLE PAGO_MOROSO';
+
+    -- Obtener el año actual dinámicamente
+    v_anno_actual := EXTRACT(YEAR FROM SYSDATE);
+
+    -- 2. Recorrer el cursor explícito
+    FOR r_pac IN c_morosos(v_anno_actual) LOOP
+        
+        -- Estructura CASE limpia para asignar multa desde el VARRAY
+        CASE 
+            WHEN r_pac.especialidad_nom = 'Cirugía General' OR r_pac.especialidad_nom = 'Dermatología' THEN 
+                v_multa_dia := v_multas(1);
+            WHEN r_pac.especialidad_nom = 'Ortopedia y Traumatología' THEN 
+                v_multa_dia := v_multas(2);
+            WHEN r_pac.especialidad_nom = 'Inmunología' OR r_pac.especialidad_nom = 'Otorrinolaringología' THEN 
+                v_multa_dia := v_multas(3);
+            WHEN r_pac.especialidad_nom = 'Fisiatría' OR r_pac.especialidad_nom = 'Medicina Interna' THEN 
+                v_multa_dia := v_multas(4);
+            WHEN r_pac.especialidad_nom = 'Medicina General' THEN 
+                v_multa_dia := v_multas(5);
+            WHEN r_pac.especialidad_nom = 'Psiquiatría Adultos' THEN 
+                v_multa_dia := v_multas(6);
+            ELSE 
+                v_multa_dia := v_multas(7); -- Cirugía Digestiva y Reumatología
+        END CASE;
+
+        -- Calcular Edad del paciente
+        v_edad := v_anno_actual - r_pac.anno_nac;
+
+        -- Consultar tramo utilizando los nombres de columnas correctos (anno_ini y anno_ter)
+        BEGIN
+            SELECT porcentaje_descto / 100
+            INTO r_calculo.v_porc_desc
+            FROM PORC_DESCTO_3RA_EDAD
+            WHERE v_edad BETWEEN anno_ini AND anno_ter;
+        EXCEPTION
+            WHEN NO_DATA_FOUND THEN
+                r_calculo.v_porc_desc := 0;
+        END;
+
+        -- Calcular monto de la multa y aplicar el beneficio si corresponde
+        v_monto_total := r_pac.dias_atraso_calc * v_multa_dia;
+        r_calculo.v_monto_multa := ROUND(v_monto_total - (v_monto_total * r_calculo.v_porc_desc));
+
+        -- 3. Inserción con las columnas oficiales de tu tabla PAGO_MOROSO
+        INSERT INTO PAGO_MOROSO (
+            PAC_RUN, 
+            PAC_DV_RUN, 
+            PAC_NOMBRE, 
+            ATE_ID, 
+            FECHA_VENC_PAGO, 
+            FECHA_PAGO, 
+            DIAS_MOROSIDAD, 
+            ESPECIALIDAD_ATENCION, 
+            MONTO_MULTA
+        ) VALUES (
+            r_pac.pac_run, 
+            r_pac.dv_run, 
+            r_pac.nombre_completo, 
+            r_pac.ate_id, 
+            r_pac.fecha_venc_pago, 
+            r_pac.fecha_pago, 
+            r_pac.dias_atraso_calc, 
+            r_pac.especialidad_nom, 
+            r_calculo.v_monto_multa
+        );
+    END LOOP;
+
+    COMMIT;
+    DBMS_OUTPUT.PUT_LINE('Caso 1 finalizado con éxito total. Tabla PAGO_MOROSO completamente poblada.');
+END;
+/
+
+
+
+SELECT 
+    PAC_RUN || '-' || PAC_DV_RUN AS "RUT PACIENTE",
+    PAC_NOMBRE AS "NOMBRE",
+    ATE_ID AS "ID ATENCIÓN",
+    FECHA_VENC_PAGO AS "F. VENCIMIENTO",
+    FECHA_PAGO AS "F. PAGO",
+    DIAS_MOROSIDAD AS "DÍAS ATRASO",
+    ESPECIALIDAD_ATENCION AS "ESPECIALIDAD",
+    MONTO_MULTA AS "MULTA COBRADA"
+FROM PAGO_MOROSO
+ORDER BY DIAS_MOROSIDAD DESC;

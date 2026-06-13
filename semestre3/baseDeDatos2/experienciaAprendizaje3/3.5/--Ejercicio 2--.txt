@@ -1,0 +1,147 @@
+--Ejercicio 2--
+
+DECLARE
+    -- Determinar año de consulta (año anterior al actual)
+    v_anno_consulta NUMBER;
+    v_max_atenciones NUMBER;
+    v_total_atenciones NUMBER;
+
+    -- REQUERIMIENTO: Cursor Explícito que procesa TODOS los médicos
+    -- Se ordena alfabéticamente por Unidad y Apellido Paterno desde el origen SQL
+    CURSOR c_medicos IS
+        SELECT 
+            m.med_run,
+            m.dv_run,
+            m.pnombre || ' ' || m.snombre || ' ' || m.apaterno || ' ' || m.amaterno AS nombre_completo,
+            m.apaterno,
+            u.nombre AS unidad_nombre
+        FROM MEDICO m
+        JOIN UNIDAD u ON m.uni_id = u.uni_id
+        ORDER BY u.nombre ASC, m.apaterno ASC;
+
+    -- REQUERIMIENTO: Registro PL/SQL para procesar variables calculadas de salida
+    TYPE reg_servicio IS RECORD (
+        v_correo      VARCHAR2(100),
+        v_destinacion VARCHAR2(100)
+    );
+    r_salida reg_servicio;
+
+    -- Variables de soporte para la extracción de caracteres (Correo Institucional)
+    v_dos_uni      VARCHAR2(2);
+    v_letras_ape   VARCHAR2(2);
+    v_run_str      VARCHAR2(20);
+    v_ult_3_run    VARCHAR2(3);
+
+BEGIN
+    -- NOTA DEL CASO: Limpiar la tabla antes de cada ejecución mediante TRUNCATE dinámico
+    -- (Es más eficiente y seguro que borrar/crear la tabla en un ambiente transaccional)
+    EXECUTE IMMEDIATE 'TRUNCATE TABLE MEDICO_SERVICIO_COMUNIDAD';
+
+    -- Obtener dinámicamente el año anterior al año actual de ejecución
+    v_anno_consulta := EXTRACT(YEAR FROM SYSDATE) - 1;
+
+    -- 1. Calcular el valor Máximo de atenciones médicas globales realizadas en ese año por algún médico
+    SELECT NVL(MAX(COUNT(a.ate_id)), 0)
+    INTO v_max_atenciones
+    FROM ATENCION a
+    WHERE EXTRACT(YEAR FROM a.fecha_atencion) = v_anno_consulta
+    GROUP BY a.med_run;
+
+    -- 2. Iterar el Cursor Explícito
+    FOR r_med IN c_medicos LOOP
+        
+        -- Calcular el total de atenciones del médico actual en el año evaluado
+        SELECT COUNT(a.ate_id)
+        INTO v_total_atenciones
+        FROM ATENCION a
+        WHERE a.med_run = r_med.med_run
+          AND EXTRACT(YEAR FROM a.fecha_atencion) = v_anno_consulta;
+
+        -- REQUERIMIENTO: Solo procesar médicos con menos del máximo de atenciones anuales
+        IF v_total_atenciones < v_max_atenciones OR v_max_atenciones = 0 THEN
+            
+            -- =========================================================
+            -- REQUERIMIENTO: CONSTRUCCIÓN DEL CORREO INSTITUCIONAL
+            -- =========================================================
+            -- Las 2 primeras letras de la unidad
+            v_dos_uni := SUBSTR(r_med.unidad_nombre, 1, 2);
+            
+            -- La antepenúltima y penúltima letra de su apellido paterno
+            -- Ejemplo: Si apellido es "PEREZ" (Largo 5), extrae desde posición (5-2) = 3 por 2 caracteres ("RE")
+            v_letras_ape := SUBSTR(r_med.apaterno, LENGTH(r_med.apaterno) - 2, 2);
+            
+            -- Los 3 últimos dígitos de su RUN (sin incluir DV)
+            v_run_str := TO_CHAR(r_med.med_run);
+            v_ult_3_run := SUBSTR(v_run_str, LENGTH(v_run_str) - 2, 3);
+            
+            -- Concatenar y pasar a minúsculas
+            r_salida.v_correo := LOWER(v_dos_uni || v_letras_ape) || v_ult_3_run || '@medicocktk.cl';
+
+            -- =========================================================
+            -- REQUERIMIENTO: MATRIZ DE DESTINACIÓN CON ESTRUCTURAS CONDICIONALES
+            -- =========================================================
+            IF r_med.unidad_nombre IN ('Atención Adulto', 'Atención Ambulatoria') THEN
+                r_salida.v_destinacion := 'Servicio de Atención Primaria de Urgencia (SAPU)';
+                
+            ELSIF r_med.unidad_nombre = 'Atención Urgencia' THEN
+                IF v_total_atenciones BETWEEN 0 AND 3 THEN
+                    r_salida.v_destinacion := 'Servicio de Atención Primaria de Urgencia (SAPU)';
+                ELSE
+                    r_salida.v_destinacion := 'Hospitales del área de la Salud Pública';
+                END IF;
+                
+            ELSIF r_med.unidad_nombre IN ('Cardiología', 'Oncología') THEN
+                r_salida.v_destinacion := 'Hospitales del área de la Salud Pública';
+                
+            ELSIF r_med.unidad_nombre IN ('Cirugía', 'Cirugía Plástica') THEN
+                IF v_total_atenciones BETWEEN 0 AND 3 THEN
+                    r_salida.v_destinacion := 'Servicio de Atención Primaria de Urgencia (SAPU)';
+                ELSE
+                    r_salida.v_destinacion := 'Hospitales del área de la Salud Pública';
+                END IF;
+                
+            ELSIF r_med.unidad_nombre = 'Paciente Crítico' THEN
+                r_salida.v_destinacion := 'Hospitales del área de la Salud Pública';
+                
+            -- Se evalúan ambas variantes por seguridad con el modelo físico de la base de datos
+            ELSIF r_med.unidad_nombre IN ('Psiquiatría y Salud Mental', 'Psiquiatría') THEN
+                r_salida.v_destinacion := 'Centros de Salud Familiar (CESFAM)';
+                
+            ELSIF r_med.unidad_nombre = 'Traumatología Adulto' THEN
+                IF v_total_atenciones BETWEEN 0 AND 3 THEN
+                    r_salida.v_destinacion := 'Servicio de Atención Primaria de Urgencia (SAPU)';
+                ELSE
+                    r_salida.v_destinacion := 'Hospitales del área de la Salud Pública';
+                END IF;
+            ELSE
+                r_salida.v_destinacion := 'Destinación No Definida';
+            END IF;
+
+            -- =========================================================
+            -- INSERCIÓN EN LA TABLA DESTINO DE FORMA ORDENADA
+            -- =========================================================
+            INSERT INTO MEDICO_SERVICIO_COMUNIDAD (
+                UNIDAD,
+                RUN_MEDICO,
+                NOMBRE_MEDICO,
+                CORREO_INSTITUCIONAL,
+                TOTAL_ATEN_MEDICAS,
+                DESTINACION
+            ) VALUES (
+                r_med.unidad_nombre,
+                TO_CHAR(r_med.med_run, '99G999G999') || '-' || r_med.dv_run, -- Formato estricto RUN con puntos
+                r_med.nombre_completo,
+                r_salida.v_correo,
+                v_total_atenciones,
+                r_salida.v_destinacion
+            );
+
+        END IF;
+    END LOOP;
+
+    COMMIT;
+    DBMS_OUTPUT.PUT_LINE('Caso 2 finalizado con éxito. Tabla MEDICO_SERVICIO_COMUNIDAD poblada.');
+END;
+/
+
+SELECT * FROM MEDICO_SERVICIO_COMUNIDAD;
