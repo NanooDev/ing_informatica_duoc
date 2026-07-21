@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mi Cuenta · Piscinas Verano Perfecto</title>
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<div id="toast-container"></div>
+
+<div class="topbar">
+  <h1>🏊 Piscinas Verano Perfecto</h1>
+  <div class="flex-center gap-12">
+    <span class="text-sm text-suave" id="pf-cliente-nombre"></span>
+    <div class="avatar avatar-sm" id="pf-avatar">—</div>
+    <a href="#" id="btn-logout-portal" class="btn btn-outline btn-sm">Cerrar sesión</a>
+  </div>
+</div>
+
+<div class="portal-shell">
+  <div class="card portal-banner">
+    <div>
+      <h1 id="pf-saludo">Hola 👋</h1>
+      <p class="subtitulo" id="pf-estado-pago">—</p>
+    </div>
+    <span class="badge" id="pf-badge-pago">—</span>
+  </div>
+
+  <div class="quick-actions mb-16">
+    <button class="btn btn-primary" id="btn-pagar-pendiente">💳 Pagar factura pendiente</button>
+    <a class="btn btn-outline" href="mailto:soporte@veranoperfecto.cl">💬 Contactar soporte</a>
+  </div>
+
+  <div class="grid grid-2 mb-16">
+    <div class="card stat-card">
+      <div class="icon-chip icon-azul">📅</div>
+      <div style="flex:1;">
+        <h3>Próxima visita</h3>
+        <div id="pf-proxima-visita"></div>
+      </div>
+    </div>
+    <div class="card stat-card">
+      <div class="icon-chip icon-turquesa">📋</div>
+      <div style="flex:1;">
+        <h3>Plan contratado</h3>
+        <div id="pf-plan"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card mb-16">
+    <div class="flex-between flex-wrap gap-12 mb-12">
+      <h2>🧹 Historial de mantenciones</h2>
+      <div class="flex gap-8 flex-wrap">
+        <input type="date" class="input" id="filtro-desde" style="width:auto;">
+        <span class="text-suave" style="align-self:center;">a</span>
+        <input type="date" class="input" id="filtro-hasta" style="width:auto;">
+        <button class="btn btn-outline btn-sm" id="btn-limpiar-filtro">Limpiar</button>
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table class="tabla">
+        <thead><tr><th>Fecha</th><th>Piscina</th><th>Técnico</th><th>pH / Cloro</th><th>Estado</th><th>Calificación</th></tr></thead>
+        <tbody id="tbody-historial"></tbody>
+      </table>
+    </div>
+    <div class="paginacion" id="pag-historial"></div>
+  </div>
+
+  <div class="card">
+    <h2 class="mb-12">🧾 Boletas y facturas</h2>
+    <div class="table-wrap">
+      <table class="tabla">
+        <thead><tr><th>Periodo</th><th>Monto</th><th>Estado</th><th></th></tr></thead>
+        <tbody id="tbody-facturas-cliente"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== MODALES ===================== -->
+<div class="modal-overlay" id="modal-calificar">
+  <div class="modal-box">
+    <div class="modal-header"><h2>Califica el servicio</h2><button class="modal-close" data-close="modal-calificar">✕</button></div>
+    <form id="form-calificar">
+      <input type="hidden" id="cal-visita-id">
+      <p class="text-suave text-sm mb-8" id="cal-visita-resumen"></p>
+      <div class="text-center mb-16">
+        <div class="selector-estrellas" id="selector-estrellas">
+          <span data-v="1">★</span><span data-v="2">★</span><span data-v="3">★</span><span data-v="4">★</span><span data-v="5">★</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Comentario (opcional)</label>
+        <textarea class="input" id="cal-comentario" rows="3"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Enviar calificación</button>
+    </form>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-reagendar-portal">
+  <div class="modal-box">
+    <div class="modal-header"><h2>Solicitar reagendamiento</h2><button class="modal-close" data-close="modal-reagendar-portal">✕</button></div>
+    <form id="form-reagendar-portal">
+      <input type="hidden" id="rp-visita-id">
+      <p class="text-suave text-sm mb-8" id="rp-visita-resumen"></p>
+      <div class="form-group">
+        <label>Motivo de la solicitud</label>
+        <textarea class="input" id="rp-motivo" rows="3" required placeholder="Ej: no habrá nadie en el domicilio ese día..."></textarea>
+      </div>
+      <p class="help-text">Tu solicitud quedará registrada para que administración coordine una nueva fecha con el técnico.</p>
+      <button type="submit" class="btn btn-primary btn-block">Enviar solicitud</button>
+    </form>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-boleta-cliente">
+  <div class="modal-box">
+    <div class="modal-header no-print"><h2>Boleta</h2><button class="modal-close" data-close="modal-boleta-cliente">✕</button></div>
+    <div id="boleta-cliente-cuerpo" class="zona-imprimible"></div>
+    <button class="btn btn-primary btn-block mt-16 no-print" onclick="window.print()">🖨️ Imprimir / Guardar como PDF</button>
+  </div>
+</div>
+
+<script src="assets/js/utils.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/pricing.js"></script>
+<script src="assets/js/observer.js"></script>
+<script src="assets/js/auth.js"></script>
+<script src="assets/js/portal.js"></script>
+</body>
+</html>

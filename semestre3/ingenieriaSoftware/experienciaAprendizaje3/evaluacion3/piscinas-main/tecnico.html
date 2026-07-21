@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mi Ruta · Piscinas Verano Perfecto</title>
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<div id="toast-container"></div>
+
+<div class="tec-shell">
+  <div class="tec-header">
+    <div class="flex-between">
+      <div>
+        <h1 id="tec-saludo">Hola 👋</h1>
+        <p style="opacity:.9;margin:0;" id="tec-fecha">—</p>
+      </div>
+      <button class="btn btn-sm tec-btn-salir" id="btn-logout-tec" title="Cerrar sesión">🚪 Salir</button>
+    </div>
+    <div class="tec-sync" id="tec-sync">🟢 Sincronizado</div>
+  </div>
+
+  <!-- ===== Vista lista (mi ruta de hoy) ===== -->
+  <div class="tec-body" id="vista-lista">
+    <div class="flex-between">
+      <h3 style="margin:0;">Mi ruta de hoy</h3>
+      <span class="badge badge-info" id="contador-ruta">0 visitas</span>
+    </div>
+    <div class="progreso-barra"><div class="progreso-barra-fill" id="ruta-progreso-bar"></div></div>
+    <p class="text-sm text-suave" style="margin:0 0 4px;" id="ruta-progreso-texto">0 de 0 efectuadas</p>
+    <div id="lista-visitas"></div>
+  </div>
+
+  <!-- ===== Vista detalle / formulario de visita ===== -->
+  <div class="tec-body" id="vista-detalle" style="display:none;">
+    <button class="btn btn-ghost btn-sm" id="btn-volver" style="align-self:flex-start;">← Volver a mi ruta</button>
+
+    <div class="card" id="detalle-info"></div>
+
+    <div class="card" id="bloque-form-visita" style="display:none;">
+      <h3>Parámetros químicos</h3>
+      <div class="input-row">
+        <div class="form-group"><label>pH</label><input class="input" type="number" step="0.1" min="0" max="14" id="in-ph" placeholder="7.2"></div>
+        <div class="form-group"><label>Cloro (ppm)</label><input class="input" type="number" step="0.1" min="0" id="in-cloro" placeholder="2.0"></div>
+      </div>
+      <div class="form-group"><label>Observaciones (opcional)</label><textarea class="input" id="in-observaciones" rows="2"></textarea></div>
+      <h3>Checklist de tareas</h3>
+      <div class="checklist-progreso"><div class="checklist-progreso-bar" id="checklist-progreso-bar"></div></div>
+      <p class="text-sm text-suave" id="checklist-progreso-texto">0/0 tareas completas</p>
+      <div class="tec-checklist" id="checklist-tareas"></div>
+    </div>
+
+    <div class="card" id="bloque-acciones" style="display:none;">
+      <div class="flex gap-12">
+        <button class="btn btn-outline btn-block" id="btn-mostrar-reagendar">📅 Reagendar</button>
+        <button class="btn btn-outline btn-block" id="btn-mostrar-incidencia">⚠️ Incidencia</button>
+      </div>
+    </div>
+
+    <div class="card" id="bloque-reagendar" style="display:none;">
+      <h3>Reagendar visita</h3>
+      <div class="form-group">
+        <label>Motivo (obligatorio)</label>
+        <textarea class="input" id="in-motivo-reagendar" rows="2" placeholder="Ej: cliente no se encontraba, acceso cerrado..."></textarea>
+        <p class="error-text" id="err-reagendar" style="display:none;">Debes indicar un motivo.</p>
+      </div>
+      <button class="btn btn-primary btn-block" id="btn-confirmar-reagendar">Confirmar reagendamiento</button>
+    </div>
+
+    <div class="card" id="bloque-incidencia" style="display:none;">
+      <h3>Reportar incidencia</h3>
+      <div class="form-group">
+        <label>Descripción (obligatoria)</label>
+        <textarea class="input" id="in-desc-incidencia" rows="2" placeholder="Describe lo ocurrido..."></textarea>
+      </div>
+      <div class="form-group">
+        <label>Foto (opcional)</label>
+        <input class="input" type="file" accept="image/*" id="in-foto-incidencia">
+        <img id="preview-foto-incidencia" class="upload-preview" style="display:none;">
+      </div>
+      <p class="error-text" id="err-incidencia" style="display:none;">Describe la incidencia antes de enviar.</p>
+      <button class="btn btn-primary btn-block" id="btn-confirmar-incidencia">Enviar incidencia</button>
+    </div>
+
+    <div class="card" id="resumen-efectuada" style="display:none;"></div>
+  </div>
+
+  <div class="tec-bottomnav" id="tec-bottomnav">
+    <span class="text-sm text-suave" id="tec-bottomnav-label">Piscinas Verano Perfecto · Vista técnico</span>
+    <button class="btn btn-primary btn-lg" id="btn-iniciar-visita" style="display:none;">▶️ Iniciar visita</button>
+    <button class="btn btn-primary btn-lg" id="btn-marcar-efectuada" style="display:none;">✅ Marcar Efectuada</button>
+  </div>
+</div>
+
+<script src="assets/js/utils.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/pricing.js"></script>
+<script src="assets/js/observer.js"></script>
+<script src="assets/js/auth.js"></script>
+<script src="assets/js/tecnico.js"></script>
+</body>
+</html>
